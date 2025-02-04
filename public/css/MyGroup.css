@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f4f5ff;
+    height: 100vh;
+}
+.titre h1{
+    color: black;
+    font-family: "Arvo", serif;
+    font-size: 3em;
+    padding: 40px 20px 40px 140px;
+}
+

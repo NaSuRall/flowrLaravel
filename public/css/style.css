@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f5ff;
+}
+.profil{
+    display: flex;
+    position: fixed;
+    right: 50px;
+    top: 50px;
+}
+.round{
+    width: 80px;
+    cursor: pointer;
+    background-color: #d7d7d7;
+    border-radius: 50%;
+}
+.round img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.no-co{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 4;
+}
+.no-co a{
+    padding: 10px 20px 10px 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-family: "Arvo", serif;
+}
+.no-co #jaune{
+    background-color: rgba(27, 111, 211, 0.91);
+
+}
+.gif{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card button{
+    padding: 10px 20px 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgba(27, 111, 211, 0.91);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-family: "Arvo", serif;
+    transition: .2s all ease-in-out;
+    cursor: pointer;
+}
+.card button:hover{
+    background-color: rgba(78, 154, 246, 0.91);
+}
+.block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2{
+    font-size: 40px;
+    color: black;
+    font-family: "Arvo", serif;
+}
+h1 span, h3 span{
+    color: rgba(27, 111, 211, 0.91);
+}
+#titre{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+}
+#titre h1{
+    margin-top: 50px;
+    font-size: 4em;
+    color: black;
+    font-family: "Arvo", serif;
+}
+
+#blockButton {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+}
+
+#blockButton h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 350px;
+    height: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+    0 10px 30px rgba(0, 0, 0, 0.06);
+    background-color: rgba(27, 111, 211, 0.91);
+    border-radius: 10px;
+    transition: .2s all ease-in-out;
+}
+.button a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-family: "Arvo", serif;
+
+}
+.jaune{
+    background-color: rgba(78, 154, 246, 0.91);
+
+}
+.jaune a{
+    color: black;
+}
+.img-block{
+    width: 100%;
+    height: 100px;
+}
+.img-block img{
+    width: 100%;
+    height: 100%;
+}
+.button:hover{
+    background-color: rgba(78, 154, 246, 0.91);
+
+}
+#mainButton{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+}
+
+#info{
+    display: flex;
+}
+
+#info img{
+    display: flex;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    right:10px;
+    z-index: 10000000;
+}
+
+.overlay {
+    position: fixed;
+    top: 50%;
+    left: 80%;
+    width: 700px;
+    height: 690px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+
+.overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-content{
+    width: 700px;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.overlay-content2{
+    margin: 10px;
+    width: 1000px;
+    height: 100%;
+}
+
+.overlay-content2 p{
+    margin: 20px;
+    font-size: 25px;
+    width: 60%;
+}
+
+.suivant, .precedent, #termine{
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1d72cd;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+.precedent{
+    background-color: white;
+    color: black;
+}
+
+#overlay4, #overlay3{
+    height: 720px;
+}
+
+
+.modal-title{
+    margin-bottom: 20px;
+    color: #1d72cd;
+}
+
+#suivant4, #precedent1{
+    display: none;
+}
+
+.overlay-content img{
+    width: 500px;
+    height: 350px;
+}
+.backgroundBlue{
+    background-color: rgba(27, 111, 211, 0.91);
+}
+
+.bandeBleu {
+    background-color: #1d72cd;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.button-close {
+    background: #ff4b5c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 10px;
+}
+
+
+.partie-pres{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+#presentation{
+    background-color: white;
+    width: 70%;
+    padding: 20px;
+    margin-left: 150px;
+    z-index: 2;
+    box-shadow: 120px -50px rgba(27, 111, 211, 0.91);
+}
+
+#presentation h2{
+    font-family: "Arvo", serif;
+}
+#textePrez{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+    width: 97%;
+    font-size: 25px;
+    line-height: 1.6;
+    margin: 10px;
+    font-family: "Arvo", serif;
+}
+
+#blockAbonnement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+#listeAbonnement{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 70px;
+}
+.texte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+#abo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 100%;
+    padding: 20px;
+    background-color: #f4f5ff;
+}
+#abo h3{
+    padding: 10px;
+    font-size: 2em;
+    color: black;
+    font-family: "Arvo", serif;
+}
+#abo .prix{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Arvo", serif;
+    padding: 10px;
+    font-size: 2em;
+    color: rgba(27, 111, 211, 0.91);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 80%;
+    background-color: white;
+}
+.popular {
+    border: 5px solid red;
+    position: relative; /* Permet au badge de se positionner par rapport à cette div */
+}
+
+.popular h4 {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    font-size: 1.2em;
+    font-family: "Arvo", serif;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    white-space: nowrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.texte ul{
+
+    padding: 10px;
+    height: 100%;
+    font-size: 1.2em;
+    color: black;
+    font-family: "Arvo", serif;
+    list-style: none;
+    margin-top: 10px;
+}
+.texte ul li{
+    padding: 10px;
+}
+.texte ul li i{
+    color: #00ff00;
+}
+#no{
+    color: gray;
+}
+.abonnementPanier{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.abonnementPanier button{
+    background-color: rgba(27, 111, 211, 0.91);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-family: "Arvo", serif;
+    padding: 20px 40px 20px 40px;
+    width: 100%;
+    transition: .2s all ease-in-out;
+}
+.abonnementPanier button:hover{
+    background-color: rgba(78, 154, 246, 0.91);
+    color: black;
+}
+.abonnementPanier button:active{
+    background-color: #dadada;
+    color: white;
+}
+@media  screen and (max-width: 1440px) {
+    .button{
+        width: 280px;
+        height: 200px;
+    }
+}

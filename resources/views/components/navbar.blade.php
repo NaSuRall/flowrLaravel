@@ -1,0 +1,150 @@
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: "Arvo", serif;
+    }
+    /* Sidenav menu */
+    .sidenav {
+        height: 98.5%;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: -215px;
+        background-color: rgb(27, 111, 211);
+        padding-top: 40px;
+        transition: left 0.5s ease;
+        margin-top: 5px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        z-index: 4;
+    }
+
+
+    .sidenav a {
+        padding: 8px 0;
+        text-decoration: none;
+        font-size: 25px;
+        color: #ffffff;
+        display: block;
+        margin-right: 20px;
+        margin-left: 20px;
+        transition: 0.3s;
+        position: relative;
+        font-family: "Arvo", serif;
+    }
+
+    .sidenav a::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: beige;
+        transition: width 0.3s ease;
+    }
+
+
+    .sidenav a:hover::after {
+        width: 100px;
+    }
+
+    .sidenav a:hover {
+        color: #111;
+    }
+
+    .sidenav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+
+
+
+    .sidenav:hover {
+        left: 0;
+    }
+
+
+    .sidenav .close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        display: none;
+    }
+
+
+    .burger-icon span {
+        display: none;
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+        z-index: 2;
+        margin-left: 20px;
+    }
+
+    #mySidenav img{
+        height: 5em;
+        width: 5em;
+        margin-bottom: 40px;
+        margin-left: 10px;
+    }
+    #fleche{
+        display: flex;
+        width: 40px;
+        margin-left: 230px;
+        font-size: 35px;
+        background-color: rgb(27, 111, 211);
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        color: white;
+        padding: 10px 5px 10px 0px;
+    }
+</style>
+
+<div id="mySidenav" class="sidenav">
+    <img src="{{ asset('img/FlowrLogo1.png') }}"/>
+    <a id="closeBtn" href="#" class="close">×</a>
+    <div  id="navListe1" class="navListe">
+        <ul>
+            <li><a href="{{ route('home')}}">Accueil</a></li>
+            <li><a href="{{ route('groups') }}">Gestion de liste</a></li>
+            <li><a href="#">Créer une liste</a></li>
+            <li><a href="#">Abonnement</a></li>
+            <li><a href="#">Catalogue</a></li>
+
+        </ul>
+    </div>
+    <div id="fleche">
+        ⮕
+    </div>
+    <div id="navListe2" class="navListe">
+        <ul>
+          <!-- {% if app.user %} -->
+            <li><a href="{{ url('app_my_acount')}}">Mon Compte</a></li>
+            <!--{% else %}-->
+            <li><a href="{{ url('app_login')}}">Se Connecter</a></li>
+            <!--{% endif %}-->
+            <li><a href="#">Mon Pannier</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Aide</a></li>
+            <li><a href="#">Info</a></li>
+
+        </ul>
+    </div>
+    <div class="logout">
+        <a href="{{ url('app_logout') }}">Deconnexion</a>
+    </div>
+</div>
+
+<a href="#" id="openBtn">
+  <span class="burger-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</a>
