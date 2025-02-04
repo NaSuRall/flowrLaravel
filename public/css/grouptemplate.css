@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arvo", serif;
+}
+body{
+    background-color: #ffffff;
+}
+
+.column{
+    float: left;
+}
+.left{
+    width: 25%;
+}
+
+.right{
+    width: 75%;
+}
+
+#divMembreGroup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    height: 100vh;
+    background: rgb(27, 111, 211);
+}
+
+#divMembreGroup h2{
+    color: white;
+    margin: 10px;
+}
+
+#listeMembreGroup{
+    margin-top: 200px;
+}
+
+#divButton{
+    display: flex;
+    margin-top: 500px;
+}
+
+.boutonAjouterMembre{
+    font-size: 25px;
+    height: 75px;
+    width: 250px;
+}

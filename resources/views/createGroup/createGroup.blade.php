@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
-@section('content')
 
-<head>
+@section('custom_css')
     <link rel="stylesheet" href="{{ asset('css/createGroup.css') }}">
-</head>
+@endsection
+
+
+@section('content')
 
 @include('components.navbar');
 

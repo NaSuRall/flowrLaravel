@@ -124,11 +124,11 @@
     </div>
     <div id="navListe2" class="navListe">
         <ul>
-          <!-- {% if app.user %} -->
-            <li><a href="{{ url('app_my_acount')}}">Mon Compte</a></li>
-            <!--{% else %}-->
+            @if(auth()->id())
+            <li><a href="{{ url('myAccount')}}">Mon Compte</a></li>
+            @else
             <li><a href="{{ url('app_login')}}">Se Connecter</a></li>
-            <!--{% endif %}-->
+            @endif
             <li><a href="#">Mon Pannier</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Aide</a></li>

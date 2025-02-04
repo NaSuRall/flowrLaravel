@@ -1,9 +1,11 @@
 @extends('layouts.app')
-@section('content')
-<head>
-    <link rel="stylesheet" href="{{ asset('css/myAccount.css') }}">
-</head>
 
+
+@section('custom_css')
+    <link rel="stylesheet" href="{{ asset('css/myAccount.css') }}">
+@endsection
+
+@section('content')
 @include('components.navbar');
 
 <div class="container">
@@ -28,7 +30,7 @@
                         <div class="colum-rens">
                             <h1>Prénom :</h1>
                             <div class="btn-user">
-{{--                                <h2>{{ app.user.firstname }}</h2>--}}
+                                <h2>{{  auth()->user()->name }}</h2>
                                 <button>Modifier <i class="fa-solid fa-pencil"></i></button>
                             </div>
                         </div>
@@ -38,7 +40,7 @@
                         <div class="colum-rens">
                             <h1>Nom :</h1>
                             <div class="btn-user">
-{{--                                <h2>{{ app.user.lastname }}</h2>--}}
+                                <h2>{{  auth()->user()->name }}</h2>
                                 <button>Modifier <i class="fa-solid fa-pencil"></i></button>
                             </div>
                         </div>
@@ -48,7 +50,7 @@
                         <div class="colum-rens">
                             <h1>email :</h1>
                             <div class="btn-user">
-{{--                                <h2>{{ app.user.email }}</h2>--}}
+                                <h2>{{  auth()->user()->email }}</h2>
                                 <button>Modifier <i class="fa-solid fa-pencil"></i></button>
                             </div>
                         </div>
@@ -58,56 +60,12 @@
                         <div class="colum-rens">
                             <h1>Téléphone :</h1>
                             <div class="btn-user">
-{{--                                <h2>{{ app.user.firstname }}</h2>--}}
+                               <h2>{{  auth()->user()->name }}</h2>
                                 <button>Modifier <i class="fa-solid fa-pencil"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="information-compte">
-                    <div class="bloc-renseignement">
-                        <div class="colum-rens">
-                            <h1>Prénom :</h1>
-                            <div class="btn-user">
-{{--                                <h2>{{ app.user.firstname }}</h2>--}}
-                                <button>Modifier <i class="fa-solid fa-pencil"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bloc-renseignement">
-                        <div class="colum-rens">
-                            <h1>Nom :</h1>
-                            <div class="btn-user">
-{{--                                <h2>{{ app.user.lastname }}</h2>--}}
-                                <button>Modifier <i class="fa-solid fa-pencil"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bloc-renseignement">
-                        <div class="colum-rens">
-                            <h1>email :</h1>
-                            <div class="btn-user">
-{{--                                <h2>{{ app.user.email }}</h2>--}}
-                                <button>Modifier <i class="fa-solid fa-pencil"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bloc-renseignement">
-                        <div class="colum-rens">
-                            <h1>Téléphone :</h1>
-                            <div class="btn-user">
-{{--                                <h2>{{ app.user.firstname }}</h2>--}}
-                                <button>Modifier <i class="fa-solid fa-pencil"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <form method="post" action="">
-                </form>
             </div>
         </div>
     </div>

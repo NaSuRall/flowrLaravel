@@ -1,25 +1,29 @@
 @extends('layouts.app')
 
+@section('custom_css')
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+@endsection
+
 @section('content')
 
-    {{--    <div class="profil">--}}
-    {{--        {% if app.user %}--}}
-    {{--        <div class="gif">--}}
-    {{--            <div class="round" id="round">--}}
-    {{--                <img src="{{ asset('img/profil.svg') }}">--}}
-    {{--            </div>--}}
-    {{--            <div class="card">--}}
-    {{--                <button type="submit" id="cart"><i class="fa-solid fa-cart-shopping"></i></button>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
+       <div class="profil">
+           @if(auth()->id())
+           <div class="gif">
+               <div class="round" id="round">
+                   <img src="{{ asset('img/profil.svg') }}">
+               </div>
+               <div class="card">
+                   <button type="submit" id="cart"><i class="fa-solid fa-cart-shopping"></i></button>
+               </div>
+           </div>
 
-    {{--        {%else %}--}}
-    {{--        <div class="no-co">--}}
-    {{--            <a href="{{ path('app_register') }}" id="jaune">S'inscrire</a>--}}
-    {{--            <a href="{{ path('app_login') }}">Se Connecter</a>--}}
-    {{--        </div>--}}
-    {{--        {% endif %}--}}
-    {{--    </div>--}}
+           @else
+           <div class="no-co">
+                <a href="{{ url('app_register') }}" id="jaune">S'inscrire</a>
+                <a href="{{ url('app_login') }}">Se Connecter</a>
+            </div>
+           @endif
+       </div>
 
 
     @include('components.navbar');
@@ -27,35 +31,37 @@
 
     <div id="titre" class="block">
         @if( auth()->id())
-            <h1>Bienvenue, {{ auth()->id() }} sur <span>FLOWR</span> !</h1>
+            <h1>Bienvenue, {{ auth()->user()->name }} sur <span>FLOWR</span> !</h1>
+
+        @else
+            <h1>Bienvenue sur <span>FLOWR</span></h1>
         @endif
-        <h1>Bienvenue sur <span>FLOWR</span></h1>
         <h2>Le site incontournable pour faire ses listes de cadeaux</h2>
     </div>
     <div id="blockButton">
         <h3>Cliquez sur le bouton d'action que vous souhaitez:</h3>
         <div id="mainButton" class="block">
 
-            <div class="button" id="MyGroupButton">
-                <a>MES GROUPES</a>
+            <a class="button" href="{{ url('groups') }}">
+                <h3>MES GROUPES</h3>
                 <div class="img-block">
                     <img src="{{ asset('img/png1.svg')}}">
                 </div>
-            </div>
+            </a>
 
-            <div class="button jaune" id="CreateGroupButton">
-                <a>CRÉER UN GROUPE</a>
+            <a class="button jaune" href="{{ url('createGroup') }}">
+                <h3>CRÉER UN GROUPE</h3>
                 <div class="img-block">
                     <img src="{{ asset('img/png2.svg')}}">
                 </div>
-            </div>
+            </a>
 
-            <div class="button" id="abonnementButton">
-                <a>ABONNEMENT</a>
+            <a class="button" id="abonnementButton">
+                <h3>ABONNEMENT</h3>
                 <div class="img-block">
                     <img src="{{ asset('img/png3.svg')}}">
                 </div>
-            </div>
+            </a>
 
         </div>
     </div>

@@ -5,12 +5,14 @@ use App\Http\Controllers\myAccount;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GroupTemplateController;
 
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->middleware('auth')->name('home');
 Route::get('/myAccount', [myAccount::class, 'index'])->name('myAccount');
 Route::get('/createGroup', [createGroup::class, 'index'])->name('createGroup');
+Route::get('/groupeTemplate', [GroupTemplateController::class, 'index'])->name('groupeTemplate');
 
 // Groups
 Route::get('/groups', [GroupController::class, 'index'])->name('groups');
