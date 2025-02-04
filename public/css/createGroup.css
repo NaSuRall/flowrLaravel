@@ -1,0 +1,56 @@
+.contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.titre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+
+}
+.titre h1{
+    color: black;
+}
+
+.titre .input-Groupe-Name{
+    width: 60%;
+    padding: 20px 30px 20px 30px;
+    border-radius: 10px;
+    background-color: #e8e8e8;
+    border:none;
+    text-decoration: none;
+    outline: none;
+}
+.form-name-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+.form-name-group button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(27, 111, 211);
+    color: white;
+    width: 80px;
+    height: 60px;
+
+}
+.form-name-group button .fa-regular{
+    font-size: 25px;
+}
+
+.form-name-group button:active{
+    background-color: rgb(52, 132, 227);
+}
