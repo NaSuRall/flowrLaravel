@@ -9,10 +9,10 @@ use App\Http\Controllers\GroupTemplateController;
 
 Auth::routes();
 
-Route::get('/', [HomeController::class, 'index'])->middleware('auth')->name('home');
-Route::get('/myAccount', [myAccount::class, 'index'])->name('myAccount');
-Route::get('/createGroup', [createGroup::class, 'index'])->name('createGroup');
-Route::get('/groupeTemplate', [GroupTemplateController::class, 'index'])->name('groupeTemplate');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/myAccount', [myAccount::class, 'index'])->middleware('auth')->name('myAccount');
+Route::get('/createGroup', [createGroup::class, 'index'])->middleware('auth')->name('createGroup');
+Route::get('/groupeTemplate', [GroupTemplateController::class, 'index'])->middleware('auth')->name('groupeTemplate');
 
 // Groups
 Route::get('/groups', [GroupController::class, 'index'])->name('groups');
