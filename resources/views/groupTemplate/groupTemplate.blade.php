@@ -9,13 +9,31 @@
 
     <div class="row">
         <div id="divMembreGroup" class="column left">
-            <h2> nom du groupe: </h2>
+
+            <div class="title">
+                <a href="{{ route('home') }}"><i class="fa-solid fa-arrow-left"></i></a>
+                <h2> Groupe : {{ auth()->user()->firstname}} </h2>
+            </div>
+
             <div id="listeMembreGroup">
-                <p>Aucun membre</p>
+
+                <div class="separate">
+                    <h3> Listes des membres :</h3>
+                </div>
+                <div class="block_user">
+                    <h3>{{ auth()->user()->firstname }}</h3>
+                    <h3>{{ auth()->user()->lastname }}</h3>
+                </div>
+
+
             </div>
-            <div id="divButton">
-                <button class="boutonAjouterMembre">Ajouter des membre</button>
-            </div>
+
+
+
+
+{{--            <div id="divButton">--}}
+{{--                <button class="boutonAjouterMembre">Ajouter des membre</button>--}}
+{{--            </div>--}}
         </div>
         <div id="#mainDivMembreGroup" class="column right">
             <div id="defautTexte">

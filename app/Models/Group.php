@@ -18,6 +18,9 @@ class Group extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function groups(){
+        return $this->hasMany(Group::class);
+    }
 
     public static function getByUserId() {
         return self::where('user_id', auth()->user()->id)->get();

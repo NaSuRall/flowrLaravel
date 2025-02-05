@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Arvo", serif;
+    font-family: "Poppins", serif;
 }
 body{
     background-color: #ffffff;
@@ -19,6 +21,30 @@ body{
     width: 75%;
 }
 
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:20px;
+}
+.title a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 2em;
+    transition: 0.5s all ease-in-out;
+}
+.title a:hover{
+    transform: rotate(-360deg);
+}
+
+
 #divMembreGroup{
     display: flex;
     flex-direction: column;
@@ -29,17 +55,38 @@ body{
 }
 
 #divMembreGroup h2{
-    color: white;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
     margin: 10px;
+    font-size: 2.2em;
 }
 
 #listeMembreGroup{
-    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
 }
 
+.separate{
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #ffffff;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: white;
+}
+.separate h3{
+    font-size: 1.6em;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+}
 #divButton{
     display: flex;
-    margin-top: 500px;
+
 }
 
 .boutonAjouterMembre{
@@ -47,3 +94,21 @@ body{
     height: 75px;
     width: 250px;
 }
+
+
+.block_user{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 70px;
+    background-color: white;
+    width: 100%;
+    color: black;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#divMembreGroup .block_user h3{
+    font-size: 1.6em;
+    color: black;
+}
+

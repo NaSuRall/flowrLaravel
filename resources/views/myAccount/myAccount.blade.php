@@ -60,7 +60,7 @@
                         <div class="colum-rens">
                             <h1>Téléphone :</h1>
                             <div class="btn-user">
-                               <h2>{{  $user->firstname }}</h2>
+                               <h2>{{  $user->tel }}</h2>
                                 <button>Modifier <i class="fa-solid fa-pencil"></i></button>
                             </div>
                         </div>
