@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('custom_css')
-    <link rel="stylesheet" href="{{ asset('css/groupTemplate.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/grouptemplate.css') }}">
 @endsection
 
 
