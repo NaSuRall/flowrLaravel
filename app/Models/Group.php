@@ -9,7 +9,15 @@ class Group extends Model
     protected $table = 'groups';
     public $timestamps = true;
 
-    protected $fillable = ['user_id', 'name', 'created_at', 'updated_at'];
+
+
+    protected $fillable = ['name', 'user_id'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 
     public static function getByUserId() {
         return self::where('user_id', auth()->user()->id)->get();

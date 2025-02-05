@@ -23,3 +23,4 @@ Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
 // Groups
 Route::get('/groups', [GroupController::class, 'index'])->name('groups');
 Route::post('/group/save', [GroupController::class, 'save'])->name('group.save');
+Route::get('/group/create', [GroupController::class, 'create'])->name('group.create');
