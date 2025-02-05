@@ -137,7 +137,7 @@
         </ul>
     </div>
     <div class="logout">
-        <a href="{{ url('app_logout') }}">Deconnexion</a>
+        <a href="{{ route('logout') }}">Deconnexion</a>
     </div>
 </div>
 

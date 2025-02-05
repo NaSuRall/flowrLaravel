@@ -31,7 +31,7 @@
 
     <div id="titre" class="block">
         @if( auth()->id())
-            <h1>Bienvenue, {{ auth()->user()->name }} sur <span>FLOWR</span> !</h1>
+            <h1>Bienvenue {{ auth()->user()->firstname }} sur <span>FLOWR</span> !</h1>
 
         @else
             <h1>Bienvenue sur <span>FLOWR</span></h1>

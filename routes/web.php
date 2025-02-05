@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GroupTemplateController;
-
+use App\Http\Controllers\Auth\LogoutController;
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -18,7 +18,7 @@ Route::get('/groupeTemplate', [GroupTemplateController::class, 'index'])->middle
 Route::get('/myAccount', [myAccount::class, 'index'])->name('myAccount');
 Route::get('/createGroup', [createGroup::class, 'index'])->name('createGroup');
 Route::get('/groupeTemplate', [GroupTemplateController::class, 'index'])->name('groupeTemplate');
-
+Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
 // Groups
 Route::get('/groups', [GroupController::class, 'index'])->name('groups');
 Route::post('/group/save', [GroupController::class, 'save'])->name('group.save');
