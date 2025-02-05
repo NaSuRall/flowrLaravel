@@ -8,21 +8,39 @@ use Illuminate\Http\Request;
 
 class GroupController extends Controller
 {
-    public function index() {
-        // User groups
-        $groups = auth()->user()->groups;
 
+    public function create()
+    {
+        return view('groupTemplate.groupTemplate');
+    }
+
+
+    public function index() {
+        $groups = auth()->user()->groups;
         return view('groups.groups', [
             'groups' => $groups
         ]);
     }
 
-    public function save(StoreGroupRequest $request) {
-        Group::create([
-            'user_id'   => auth()->user()->id,
-            'name'      => $request->name,
+    public function save(Request $request)
+    {
+
+        if (!auth()->check()) {
+            return redirect()->route('login')->with('error', 'Vous devez être connecté pour créer un groupe.');
+        }
+
+        $userId = auth()->id();
+        $request->validate([
+            'name' => 'required|string|max:255|unique:groups,name',
         ]);
 
-        return redirect()->back()->with('success', 'Group created.');
+        Group::create([
+            'name' => $request->input('name'),
+            'user_id' => $userId,
+        ]);
+        return redirect()->route('group.create')->with('success', 'Groupe créé avec succès !');
     }
+
+
+
 }

@@ -10,4 +10,5 @@ class createGroup extends Controller
     {
         return view('createGroup.createGroup');
     }
+
 }

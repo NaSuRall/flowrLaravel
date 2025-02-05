@@ -15,12 +15,15 @@ return new class extends Migration
             $table->engine = 'InnoDB';
 
             $table->id();
-            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned(); // Si l'utilisateur peut être nullable, ajoute ->nullable()
             $table->string('name');
             $table->timestamps();
 
-            // Foreign key
+            // Ajout d'une clé étrangère
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
+            // Index sur user_id (optionnel, mais peut être utile pour la performance)
+            $table->index('user_id');
         });
     }
 
