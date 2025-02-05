@@ -113,7 +113,7 @@
         <ul>
             <li><a href="{{ route('home')}}">Accueil</a></li>
             <li><a href="{{ route('groups') }}">Gestion de liste</a></li>
-            <li><a href="#">Créer une liste</a></li>
+            <li><a href="{{ route('createGroup') }}">Créer une liste</a></li>
             <li><a href="#">Abonnement</a></li>
             <li><a href="#">Catalogue</a></li>
 
@@ -127,7 +127,7 @@
             @if(auth()->id())
             <li><a href="{{ url('myAccount')}}">Mon Compte</a></li>
             @else
-            <li><a href="{{ url('app_login')}}">Se Connecter</a></li>
+            <li><a href="{{ url('login')}}">Se Connecter</a></li>
             @endif
             <li><a href="#">Mon Pannier</a></li>
             <li><a href="#">Contact</a></li>

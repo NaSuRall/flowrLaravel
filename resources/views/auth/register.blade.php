@@ -22,7 +22,7 @@
                     @csrf
 
                 <div class="form-group">
-                    <label for="firstname" class="col-md-4 col-form-label text-md-end">{{ __('firstname') }}</label>
+                    <label for="firstname" class="col-md-4 col-form-label text-md-end">{{ __('Prenom') }}</label>
 
                     <input id="firstname" type="text" class="form-control @error('firstname') is-invalid @enderror" name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" autofocus>
                     @error('firstname')
@@ -34,7 +34,7 @@
 
 
                 <div class="form-group">
-                    <label for="lastname" class="col-md-4 col-form-label text-md-end">{{ __('lastname') }}</label>
+                    <label for="lastname" class="col-md-4 col-form-label text-md-end">{{ __('Nom de Famille') }}</label>
 
                     <input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus>
                         @error('lastname')
@@ -46,7 +46,7 @@
 
 
                 <div class="form-group">
-                    <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                    <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Adresse Email') }}</label>
 
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                         @error('email')
@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                    <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Mot de passe') }}</label>
 
                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                         @error('password')
@@ -69,7 +69,7 @@
 
 
                 <div class="form-group">
-                    <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+                    <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirmer Mot de Passe') }}</label>
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                 </div>
 
@@ -83,7 +83,7 @@
                         {{ __('Register') }}
                 </button>
 
-                <a href="{{ url('app_login') }}" id="btn">deja un compte ? connecte toi !</a>
+                <a href="{{ url('app_login') }}" id="btn">Deja un compte ? Connecte toi !</a>
                 </form>
             </div>
         </div>

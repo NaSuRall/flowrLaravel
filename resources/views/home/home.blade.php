@@ -19,8 +19,8 @@
 
            @else
            <div class="no-co">
-                <a href="{{ url('app_register') }}" id="jaune">S'inscrire</a>
-                <a href="{{ url('app_login') }}">Se Connecter</a>
+                <a href="{{ url('register') }}" id="jaune">S'inscrire</a>
+                <a href="{{ url('login') }}">Se Connecter</a>
             </div>
            @endif
        </div>
