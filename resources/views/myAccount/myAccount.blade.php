@@ -30,7 +30,7 @@
                         <div class="colum-rens">
                             <h1>Prénom :</h1>
                             <div class="btn-user">
-                                <h2>{{  auth()->user()->name }}</h2>
+                                <h2>{{  $user->firstname }}</h2>
                                 <button>Modifier <i class="fa-solid fa-pencil"></i></button>
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                         <div class="colum-rens">
                             <h1>Nom :</h1>
                             <div class="btn-user">
-                                <h2>{{  auth()->user()->name }}</h2>
+                                <h2>{{  $user->lastname }}</h2>
                                 <button>Modifier <i class="fa-solid fa-pencil"></i></button>
                             </div>
                         </div>
@@ -50,7 +50,7 @@
                         <div class="colum-rens">
                             <h1>email :</h1>
                             <div class="btn-user">
-                                <h2>{{  auth()->user()->email }}</h2>
+                                <h2>{{  $user->email }}</h2>
                                 <button>Modifier <i class="fa-solid fa-pencil"></i></button>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                         <div class="colum-rens">
                             <h1>Téléphone :</h1>
                             <div class="btn-user">
-                               <h2>{{  auth()->user()->name }}</h2>
+                               <h2>{{  $user->firstname }}</h2>
                                 <button>Modifier <i class="fa-solid fa-pencil"></i></button>
                             </div>
                         </div>

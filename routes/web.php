@@ -15,7 +15,8 @@ Route::get('/myAccount', [myAccount::class, 'index'])->middleware('auth')->name(
 Route::get('/createGroup', [createGroup::class, 'index'])->middleware('auth')->name('createGroup');
 Route::get('/groupeTemplate', [GroupTemplateController::class, 'index'])->middleware('auth')->name('groupeTemplate');
 
-Route::get('/myAccount', [myAccount::class, 'index'])->name('myAccount');
+Route::get('/myAccount', [myAccount::class, 'index'])->name('myAccount')->middleware('auth');;
+Route::get('/myAccount', [myAccount::class, 'myAccount'])->name('myAccount');
 Route::get('/createGroup', [createGroup::class, 'index'])->name('createGroup');
 Route::get('/groupeTemplate', [GroupTemplateController::class, 'index'])->name('groupeTemplate');
 Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
