@@ -9,15 +9,16 @@ use Illuminate\Http\Request;
 class GroupController extends Controller
 {
 
-    public function create()
+    public function show(Group $group)
     {
-        return view('groupTemplate.groupTemplate');
+
+        return view('groupTemplate.groupTemplate', ['group' => $group]);
     }
 
 
     public function index() {
         // User groups
-        $groups = auth()->user()->group;
+        $groups = auth()->user()->groups;
 
         return view('groups.groups', [
             'groups' => $groups
@@ -36,11 +37,12 @@ class GroupController extends Controller
             'name' => 'required|string|max:255|unique:groups,name',
         ]);
 
-        Group::create([
+        $group = Group::create([
             'name' => $request->input('name'),
             'user_id' => $userId,
         ]);
-        return redirect()->route('group.create')->with('success', 'Groupe créé avec succès !');
+
+        return redirect()->route('group.show', $group)->with('success', 'Groupe créé avec succès !');
     }
 
 

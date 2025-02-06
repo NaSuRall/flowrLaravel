@@ -12,7 +12,7 @@
 
             <div class="title">
                 <a href="{{ route('home') }}"><i class="fa-solid fa-arrow-left"></i></a>
-                <h2> Groupe : {{ auth()->user()->firstname}} </h2>
+                <h2> Groupe : {{ $group->name }} </h2>
             </div>
 
             <div id="listeMembreGroup">

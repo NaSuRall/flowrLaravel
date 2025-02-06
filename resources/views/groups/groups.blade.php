@@ -8,7 +8,7 @@
             <h1>Mes Groupes :</h1>
 
             @foreach($groups as $group)
-                <p>{{ $group->name }}</p>
+                <p><a href="{{ route('group.show', $group) }}">{{ $group->name }}</a></p>
             @endforeach
         </div>
     </div>
