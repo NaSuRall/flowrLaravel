@@ -1,13 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "annimation.css";
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.contain{
+
+.contain {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 97vh;
+    height: 100vh;
+
+
+    background: linear-gradient(90deg, #ffffff, #a6cdf8, #e3ecff);
+    background-size: 300% 300%;
+    animation: movingGradient 10s infinite alternate ease-in-out;
+    backdrop-filter: blur(10px);
 }
 
 .titre{
@@ -20,6 +29,9 @@
 }
 .titre h1{
     color: black;
+    font-size: 4em;
+    font-family: "Arvo", serif;
+    padding-bottom: 50px;
 }
 
 .titre .input-Groupe-Name{
