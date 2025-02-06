@@ -6,7 +6,7 @@
     }
     /* Sidenav menu */
     .sidenav {
-        height: 98.5%;
+        height: 98%;
         width: 250px;
         position: fixed;
         top: 0;

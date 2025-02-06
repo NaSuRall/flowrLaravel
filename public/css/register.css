@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+@import "annimation.css";
 *{
     margin: 0;
     padding: 0;
@@ -25,14 +25,17 @@ body{
     font-style: normal;
     font-size: 3em;
     margin-top: 50px;
+
 }
 .left {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 75%;
-    background: rgb(27, 111, 211);
-    background: linear-gradient(90deg, rgb(27, 111, 211) 85%, rgba(255,255,255,1) 94%);
+    background: linear-gradient(90deg, #ffffff, #589fef, #e3ecff);
+    background-size: 300% 300%;
+    animation: movingGradient 10s infinite alternate ease-in-out;
+    backdrop-filter: blur(10px);
 }
 
 .right img{
@@ -51,14 +54,14 @@ body{
     padding: 20px;
     background-color: white;
 
-
 }
 .titre h1{
     font-size: 3em;
     font-weight: 500;
     font-style: normal;
     padding: 30px;
-    color: white;
+    color: #000000;
+
 }
 /* Clear floats after the columns */
 .row:after {

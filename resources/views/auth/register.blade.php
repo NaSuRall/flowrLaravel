@@ -83,7 +83,7 @@
                         {{ __('Register') }}
                 </button>
 
-                <a href="{{ url('app_login') }}" id="btn">Deja un compte ? Connecte toi !</a>
+                <a href="{{ url('login') }}" id="btn">Deja un compte ? Connecte toi !</a>
                 </form>
             </div>
         </div>
