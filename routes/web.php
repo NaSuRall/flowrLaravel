@@ -21,6 +21,6 @@ Route::get('/createGroup', [createGroup::class, 'index'])->name('createGroup');
 Route::get('/groupeTemplate', [GroupTemplateController::class, 'index'])->name('groupeTemplate');
 Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
 // Groups
-Route::get('/groups', [GroupController::class, 'index'])->name('groups');
+Route::get('/groups', [GroupController::class, 'index'])->middleware('auth')->name('groups');
 Route::post('/group/save', [GroupController::class, 'save'])->name('group.save');
 Route::get('/group/show/{group}', [GroupController::class, 'show'])->name('group.show');
