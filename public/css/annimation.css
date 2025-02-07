@@ -4,7 +4,12 @@
     100% { background-position: 0% 50%; }
 }
 
+@keyframes apparition {
+    0% {opacity: 0;}
+    50% {opacity: 0.8;}
+    100% {opacity: 1;}
 
+}
 /*background: linear-gradient(90deg, #ffffff, #a6cdf8, #e3ecff);*/
 /*background-size: 300% 300%;*/
 /*animation: movingGradient 10s infinite alternate ease-in-out;*/

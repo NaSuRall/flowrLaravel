@@ -26,17 +26,18 @@
        </div>
 
 
-    @include('components.navbar');
+    @include('components.navbar')
 
 
     <div id="titre" class="block">
         @if( auth()->id())
             <h1>Bienvenue {{ auth()->user()->firstname }} sur <span>FLOWR</span> !</h1>
-
+            <h2><span>Flowr</span></h2>
         @else
             <h1>Bienvenue sur <span>FLOWR</span></h1>
+            <h2><span>Flowr</span></h2>
         @endif
-        <h2>Le site incontournable pour faire ses listes de cadeaux</h2>
+        <h3>Le site incontournable pour faire ses listes de cadeaux</h3>
     </div>
     <div id="blockButton">
         <h3>Cliquez sur le bouton d'action que vous souhaitez:</h3>
@@ -147,7 +148,7 @@
                     joie à vos moments spéciaux !</p>
             </div>
         </div>
-        <div class="gauche"></div>
+
     </div>
 
     <div id="blockAbonnement" class="block">

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+@import "annimation.css";
 *{
     margin: 0;
     padding: 0;
@@ -15,6 +15,7 @@ body{
     position: fixed;
     right: 50px;
     top: 50px;
+    z-index: 100;
 }
 .round{
     width: 80px;
@@ -93,6 +94,9 @@ h1 span, h3 span{
     align-items: center;
     width: 100%;
     height: 40vh;
+    animation: apparition 3s  alternate ease-in-out;
+
+
 }
 #titre h1{
     margin-top: 50px;
@@ -100,7 +104,9 @@ h1 span, h3 span{
     color: black;
     font-family: "Arvo", serif;
 }
-
+#titre h2{
+    visibility: hidden;
+}
 #blockButton {
     display: flex;
     flex-direction: column;
@@ -431,9 +437,141 @@ h1 span, h3 span{
     background-color: #dadada;
     color: white;
 }
-@media  screen and (max-width: 1440px) {
+
+
+
+/* 📱 Mobile (moins de 600px) */
+@media (max-width: 599px) {
+ #titre{
+     width: 100%;
+     height: 100%;
+ }
+#titre h1{
+     display: none;
+ }
+#titre h2{
+    visibility: visible;
+ }
+#titre h3{
+    visibility: hidden;
+}
+#mySidenav{
+    visibility: hidden;
+ }
+#blockButton{
+    width: 100%;
+    height: 100%;
+}
+#mainButton{
+    flex-direction: column;
+}
+.button{
+    width: 90%;
+    height: 100%;
+}
+#blockButton h3{
+        font-size: 1.5em;
+        padding: 10px;
+ }
+.partie-pres{
+    flex-direction: column;
+    height: 100%;
+
+}
+#presentation{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+
+}
+
+    .partie-pres {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    #presentation {
+        width: 95%;
+        padding: 15px;
+        box-shadow: 20px -10px rgba(27, 111, 211, 0.91);
+    }
+
+    #textePrez {
+        font-size: 18px;
+        line-height: 1.4;
+        height: auto;
+        width: 100%;
+        margin: 0;
+    }
+
+    #presentation h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    #textePrez h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #blockAbonnement h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+        text-align: center;
+    }
+    #blockAbonnement{
+        height: 100%;
+    }
+    #listeAbonnement {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #abo {
+        width: 100%;
+        max-width: 350px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .popular h4 {
+        font-size: 0.9em;
+        padding: 6px;
+    }
+
+    .abonnementPanier button {
+        font-size: 1.2em;
+        padding: 12px 20px;
+    }
+    .profil{
+        visibility: hidden;
+    }
+
+}
+
+/* 📱📟 Tablette portrait (600px à 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+
+}
+
+/* 💻 Tablette paysage et petits écrans (768px à 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* 🖥️ Ordinateurs portables et écrans moyens (1024px à 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
     .button{
         width: 280px;
         height: 200px;
     }
+}
+
+/* 🖥️ Grands écrans et desktops (1280px et plus) */
+@media (min-width: 1280px) {
+
 }
