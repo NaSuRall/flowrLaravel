@@ -12,7 +12,7 @@
 
             <div class="title">
                 <a href="{{ route('home') }}"><i class="fa-solid fa-arrow-left"></i></a>
-                <h2> Groupe : {{ $group->name }} </h2>
+                <h2>{{ $group->name }} </h2>
             </div>
 
             <div id="listeMembreGroup">
@@ -37,7 +37,14 @@
         </div>
         <div id="#mainDivMembreGroup" class="column right">
             <div id="defautTexte">
-                <p>Il n'y aucune fiche pour l'instant</p>
+
+                <div class="navbar">
+                    <div class="onglets">
+                        <a href="">Accueil</a>
+                        <a href="">Creation liste</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
