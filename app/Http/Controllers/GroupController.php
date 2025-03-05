@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\Group\StoreGroupRequest;
 use App\Models\Group;
+use App\Models\Liste;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class GroupController extends Controller
 {
@@ -49,7 +51,8 @@ class GroupController extends Controller
     public function loadContent($section): View|string
     {
         if ($section === "accueil") {
-            return view('partials.accueil')->render();
+            $AllListes = Liste::all();
+            return view('partials.accueil', compact('AllListes'))->render();
         } elseif ($section === "creation-liste") {
             return view('partials.creation-liste')->render();
         } else {

@@ -16,11 +16,13 @@ return new class extends Migration
 
             $table->id();
             $table->bigInteger('group_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
             $table->string('name');
             $table->timestamps();
 
             // Foreign key
             $table->foreign('group_id')->references('id')->on('groups')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
