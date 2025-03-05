@@ -7,6 +7,38 @@
 }
 .liste-content {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     overflow: scroll;
    height: 81vh;
+}
+.table-liste{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.group{
+    display: flex;
+    background-color: #0d6efd;
+    gap: 20px;
+    margin:40px;
+    height: 30vh;
+    width: 30vh;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    transition: .5s all ease-in-out;
+}
+
+.group:hover{
+    background-color: rgb(52, 131, 239);
+    box-shadow: 10px 10px 10px #1965d5;
+}
+
+.group h3{
+    margin-top: 10px;
+    font-size: 1.8em;
+    color:white;
 }
