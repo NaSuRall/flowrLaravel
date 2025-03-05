@@ -46,5 +46,18 @@ class GroupController extends Controller
     }
 
 
+    public function loadContent($section): View|string
+    {
+        if ($section === "accueil") {
+            return view('partials.accueil')->render();
+        } elseif ($section === "creation-liste") {
+            return view('partials.creation-liste')->render();
+        } else {
+            return "<p>Section introuvable</p>";
+        }
+    }
+
+
+
 
 }

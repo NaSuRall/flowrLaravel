@@ -1,0 +1,12 @@
+.titre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-bottom: 2px solid black;
+}
+.liste-content {
+    display: flex;
+    overflow: scroll;
+   height: 81vh;
+}

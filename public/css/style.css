@@ -104,6 +104,9 @@ h1 span, h3 span{
     color: black;
     font-family: "Arvo", serif;
 }
+#titre h3{
+    font-size: 2em;
+}
 #titre h2{
     visibility: hidden;
 }

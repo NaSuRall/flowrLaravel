@@ -2,6 +2,7 @@
 
 @section('custom_css')
     <link rel="stylesheet" href="{{ asset('css/grouptemplate.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/accueil-grp.css') }}">
 @endsection
 
 
@@ -28,24 +29,45 @@
 
             </div>
 
-
-
-
 {{--            <div id="divButton">--}}
 {{--                <button class="boutonAjouterMembre">Ajouter des membre</button>--}}
 {{--            </div>--}}
         </div>
         <div id="#mainDivMembreGroup" class="column right">
-            <div id="defautTexte">
-
-                <div class="navbar">
-                    <div class="onglets">
-                        <a href="">Accueil</a>
-                        <a href="">Creation liste</a>
-                    </div>
+            <div class="navbar">
+                <div class="onglets">
+                    <a href="#" class="nav-link" data-target="accueil">Accueil</a>
+                    <a href="#" class="nav-link" data-target="creation-liste">Création liste</a>
                 </div>
-
             </div>
+           <div id="contentArea">
+
+           </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".nav-link").click(function(e) {
+                e.preventDefault();
+
+                let target = $(this).attr("data-target");
+                let url = "/group-content/" + target;
+
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    success: function(response) {
+                        $("#contentArea").html(response);
+                    },
+                    error: function(xhr) {
+                        console.log(xhr.responseText);
+                        $("#contentArea").html("<p>Erreur lors du chargement.</p>");
+                    }
+                });
+            });
+        });
+    </script>
+
 @endsection

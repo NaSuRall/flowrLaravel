@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "annimation.css";
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Arvo", serif;
 }
 body{
     background-color: #f4f5ff;
@@ -61,10 +64,14 @@ body{
     border-radius: 35px;
 }
 
+
 .addButton i{
     color: white;
+    transition: 1s all ease-in-out;
 }
-
+.addButton i:hover{
+    transform: rotate(360deg) ;
+}
 .but {
     display: flex;
     align-items: center;
