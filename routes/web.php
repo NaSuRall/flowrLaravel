@@ -30,5 +30,5 @@ Route::post('/group/join', [GroupController::class, 'join'])->name('group.join')
 
 
 Route::get('/group-content/{section}/{groupId}', [GroupController::class, 'loadContent'])->name('loadContent');
-Route::post('/group-content/', [GroupController::class, 'createListe'])->name('create.Liste');
+Route::post('/group', [GroupController::class, 'createListe'])->name('create.Liste');
 ;

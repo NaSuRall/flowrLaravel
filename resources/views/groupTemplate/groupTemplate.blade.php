@@ -7,10 +7,10 @@
 
 
 @section('content')
-
+    <input type="hidden" value="{{ $group->id }}" id="groupID">
     <div class="row">
         <div id="divMembreGroup" class="column left">
-            <input type="hidden" value="{{ $group->id }}" id="groupID">
+
             <div class="title">
                 <a href="{{ route('home') }}"><i class="fa-solid fa-arrow-left"></i></a>
                 <h2>{{ $group->name }} </h2>
@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <script src="copy.js"></script>
+    <script src="/public/js/copy.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         const currentGroup = document.getElementById("groupID");
@@ -70,9 +70,11 @@
             if (groupId) {
                 urldata += "/" + groupId
             }
+            console.log(urldata)
             $.ajax({
                 url: urldata,
                 type: "GET",
+                data: "groupId=" + groupId,
                 success: function (response) {
                     $("#contentArea").html(response);
                 },
@@ -84,7 +86,7 @@
         }
         $(document).ready(function () {
             let target = $(this).attr("data-target");
-            let url = "/group-content/accueil"  ;
+            let url = "/group-content/accueil";
             getData(url, currentGroup.value);
 
             $(".nav-link").click(function (e) {
@@ -93,7 +95,7 @@
                 let target = $(this).attr("data-target");
                 let url = "/group-content/" + target;
 
-                getData(url, target)
+                getData(url, currentGroup.value)
             });
         });
 

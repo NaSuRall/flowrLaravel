@@ -11,6 +11,6 @@ class Liste extends Model
     protected $table = 'lists';
 
 
-    protected $fillable = ['user_id','name', 'description', 'lien'];
+    protected $fillable = ['group_id','user_id','name', 'description', 'Lien'];
     public $timestamps = true;
 }

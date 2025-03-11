@@ -58,10 +58,11 @@ class GroupController extends Controller
     public function loadContent($section, $groupId): View|string
     {
         if ($section === "accueil") {
-            $group = Group::findOrFail($groupId);
             $AllListes = Liste::where('group_id', $groupId)->get();
-            return view('partials.accueil', compact('AllListes', 'group'))->render();
+            return view('partials.accueil', compact('AllListes'))->render();
         } elseif ($section === "creation-liste") {
+
+
             return view('partials.creation-liste', compact('groupId'))->render();
         } else {
             return "<p>Section introuvable</p>";
@@ -74,18 +75,23 @@ class GroupController extends Controller
             'group_id' => 'required|integer|exists:groups,id',
             'name' => 'required|string|max:255',
             'description' => 'required|string|max:255',
-            'lien' => 'required|string|max:255',
+            'Lien' => 'required|string|max:255',
         ]);
+        $group = Group::where('id', $request->input('group_id'))->firstOrFail();
 
-        Liste::create([
+        if (!$group){
+            return redirect()->route('home')->with('error', 'Ce groupe n\existe pas !.');
+        }
+
+       Liste::create([
             'group_id' => $request->input('group_id'),
+            'user_id' => auth()->id(),
             'name' => $request->input('name'),
             'description' => $request->input('description'),
-            'lien' => $request->input('lien'),
+            'Lien' => $request->input('Lien'),
         ]);
 
-        return redirect()->route('loadContent', ['section' => 'accueil', 'groupId' => $request->input('group_id')])
-            ->with('success', 'Liste créée avec succès !');
+        return redirect()->route('group.show', $group->code );
     }
 
 

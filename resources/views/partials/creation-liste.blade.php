@@ -10,7 +10,7 @@
     <input type="text" name="description" required>
 
     <label>Lien</label>
-    <input type="text" name="lien" required>
+    <input type="text" name="Lien" required>
 
     <button type="submit">Créer</button>
 </form>
