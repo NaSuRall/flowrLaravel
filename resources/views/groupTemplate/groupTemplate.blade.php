@@ -32,13 +32,10 @@
 <div class="dia">
     <dialog>
         <button autofocus>Fermer</button>
-        @foreach($users as $user)
-            <div class="block_user">
-                <h3>{{ $user->firstname }}</h3>
-                <h3>{{ $user->lastname }}</h3>
-                <button>Ajouter +</button>
-            </div>
-        @endforeach
+        <div class="code">
+            <p>Code du groupe: <span id="tocopy">{{$group->code }}</span></p>
+            <input type="button" value="Copier" class="js-copy" data-target="#tocopy">
+        </div>
     </dialog>
     <button>Ajouter au groupe !</button>
 </div>
@@ -57,6 +54,7 @@
         </div>
     </div>
 
+    <script src="copy.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         const currentGroup = document.getElementById("groupID");

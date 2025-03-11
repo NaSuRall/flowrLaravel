@@ -14,7 +14,7 @@
 
             <div class="mainContent">
                 @foreach($groups as $group)
-                    <a class="group" href="{{ route('group.show', $group) }}">
+                    <a class="group" href="{{ route('group.show', ['code' => $group->code]) }}">
                         <h3>{{ $group->name }}</h3>
                         <div class="img-block">
                             <img src="">
@@ -27,6 +27,15 @@
                 </div>
             </div>
 
+            </div>
+
+            <div class="joinGroup">
+                <h3>Rejoindre un groupe</h3>
+                <form action="{{ route('group.join') }}" method="POST">
+                    @csrf
+                    <input type="text" name="code" placeholder="Entrez le code du groupe" required>
+                    <button type="submit">Rejoindre</button>
+                </form>
             </div>
 
         </div>

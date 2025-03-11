@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('user_id')->unsigned(); // Si l'utilisateur peut être nullable, ajoute ->nullable()
             $table->string('name');
+            $table->string('code', 5)->unique()->nullable();
             $table->timestamps();
 
             // Ajout d'une clé étrangère
