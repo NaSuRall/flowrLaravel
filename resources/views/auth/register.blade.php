@@ -24,7 +24,7 @@
                 <div class="form-group">
                     <label for="firstname" class="col-md-4 col-form-label text-md-end">{{ __('Prenom') }}</label>
 
-                    <input id="firstname" type="text" class="form-control @error('firstname') is-invalid @enderror" name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" autofocus>
+                    <input id="firstname" type="text" class="form-control @error('firstname') is-invalid @enderror" name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" autofocus maxlength="15" required autofocus>
                     @error('firstname')
                     <span class="invalid-feedback" role="alert">
                      <strong>{{ $message }}</strong>
