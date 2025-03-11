@@ -7,10 +7,10 @@
 
 
 @section('content')
-
+    <input type="hidden" value="{{ $group->id }}" id="groupID">
     <div class="row">
         <div id="divMembreGroup" class="column left">
-            <input type="hidden" value="{{ $group->id }}" id="groupID">
+
             <div class="title">
                 <a href="{{ route('home') }}"><i class="fa-solid fa-arrow-left"></i></a>
                 <h2>{{ $group->name }} </h2>
@@ -21,10 +21,12 @@
                 <div class="separate">
                     <h3> Listes des membres :</h3>
                 </div>
-                <div class="block_user">
-                    <h3>{{ auth()->user()->firstname }}</h3>
-                    <h3>{{ auth()->user()->lastname }}</h3>
-                </div>
+                @foreach($users as $user)
+                    <div class="block_user">
+                        <h3>{{ $user->firstname }}</h3>
+                        <h3>{{ $user->lastname }}</h3>
+                    </div>
+                @endforeach
 
 
             </div>

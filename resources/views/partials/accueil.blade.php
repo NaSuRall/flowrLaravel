@@ -9,11 +9,10 @@
     <div class="table-liste">
         @foreach($AllListes as $AllListe)
             <a class="group" href="{{ route('group.show', $AllListe) }}">
-                <h3>{{ $AllListe->name }}caca</h3>
+                <h3>{{ $AllListe->name }}</h3>
                 <div class="img-block">
                 </div>
             </a>
         @endforeach
     </div>
-
 </div>

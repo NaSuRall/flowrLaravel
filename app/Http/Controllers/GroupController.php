@@ -38,7 +38,7 @@ class GroupController extends Controller
 
         $userId = auth()->id();
         $request->validate([
-            'name' => 'required|string|max:255|unique:groups,name',
+            'name' => 'required|string|max:10|unique:groups,name',
         ]);
 
         $group = Group::create([
@@ -58,14 +58,42 @@ class GroupController extends Controller
     public function loadContent($section, $groupId): View|string
     {
         if ($section === "accueil") {
-            $AllListes = Liste::all()->where('group_id', $groupId);
+            $AllListes = Liste::where('group_id', $groupId)->get();
             return view('partials.accueil', compact('AllListes'))->render();
         } elseif ($section === "creation-liste") {
-            return view('partials.creation-liste')->render();
+
+
+            return view('partials.creation-liste', compact('groupId'))->render();
         } else {
             return "<p>Section introuvable</p>";
         }
     }
+
+    public function createListe(Request $request)
+    {
+        $request->validate([
+            'group_id' => 'required|integer|exists:groups,id',
+            'name' => 'required|string|max:10',
+            'description' => 'required|string|max:255',
+            'Lien' => 'required|string|max:255',
+        ]);
+        $group = Group::where('id', $request->input('group_id'))->firstOrFail();
+
+        if (!$group){
+            return redirect()->route('home')->with('error', 'Ce groupe n\existe pas !.');
+        }
+
+       Liste::create([
+            'group_id' => $request->input('group_id'),
+            'user_id' => auth()->id(),
+            'name' => $request->input('name'),
+            'description' => $request->input('description'),
+            'Lien' => $request->input('Lien'),
+        ]);
+
+        return redirect()->route('group.show', $group->code );
+    }
+
 
     public function join(Request $request)
     {
