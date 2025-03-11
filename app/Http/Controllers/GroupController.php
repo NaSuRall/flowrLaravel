@@ -38,7 +38,7 @@ class GroupController extends Controller
 
         $userId = auth()->id();
         $request->validate([
-            'name' => 'required|string|max:255|unique:groups,name',
+            'name' => 'required|string|max:10|unique:groups,name',
         ]);
 
         $group = Group::create([
@@ -73,7 +73,7 @@ class GroupController extends Controller
     {
         $request->validate([
             'group_id' => 'required|integer|exists:groups,id',
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:10',
             'description' => 'required|string|max:255',
             'Lien' => 'required|string|max:255',
         ]);
