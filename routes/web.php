@@ -27,4 +27,4 @@ Route::post('/group/save', [GroupController::class, 'save'])->name('group.save')
 Route::get('/group/show/{group}', [GroupController::class, 'show'])->name('group.show');
 
 
-Route::get('/group-content/{section}', [GroupController::class, 'loadContent'])->name('loadContent');
+Route::get('/group-content/{section}/{groupId}', [GroupController::class, 'loadContent'])->name('loadContent');

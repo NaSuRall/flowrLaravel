@@ -10,7 +10,7 @@
 
     <div class="row">
         <div id="divMembreGroup" class="column left">
-
+            <input type="hidden" value="{{ $group->id }}" id="groupID">
             <div class="title">
                 <a href="{{ route('home') }}"><i class="fa-solid fa-arrow-left"></i></a>
                 <h2>{{ $group->name }} </h2>
@@ -48,24 +48,41 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $(".nav-link").click(function(e) {
+        const currentGroup = document.getElementById("groupID");
+
+        function getData(url, groupId) {
+            // if (!target || !url) {
+            //     console.error("Target or URL is not defined.");
+            //     return;
+            // }
+            let urldata = url;
+            if (groupId) {
+                urldata += "/" + groupId
+            }
+            $.ajax({
+                url: urldata,
+                type: "GET",
+                success: function (response) {
+                    $("#contentArea").html(response);
+                },
+                error: function (xhr) {
+                    console.log(xhr.responseText);
+                    $("#contentArea").html("<p>Erreur lors du chargement.</p>");
+                }
+            });
+        }
+        $(document).ready(function () {
+            let target = $(this).attr("data-target");
+            let url = "/group-content/accueil"  ;
+            getData(url, currentGroup.value);
+
+            $(".nav-link").click(function (e) {
                 e.preventDefault();
 
                 let target = $(this).attr("data-target");
                 let url = "/group-content/" + target;
 
-                $.ajax({
-                    url: url,
-                    type: "GET",
-                    success: function(response) {
-                        $("#contentArea").html(response);
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                        $("#contentArea").html("<p>Erreur lors du chargement.</p>");
-                    }
-                });
+                getData(url, target)
             });
         });
     </script>

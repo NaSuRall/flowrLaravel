@@ -17,8 +17,9 @@ class ListeFactory extends Factory
     {
         return [
             'name' => $this->faker->word,
-            'user_id' => 1,
-            'group_id' => Group::inRandomOrder()->first()->id,
+            'user_id' => 2,
+            'group_id' => 1
+//            'group_id' => Group::inRandomOrder()->first()->id,
         ];
     }
 }

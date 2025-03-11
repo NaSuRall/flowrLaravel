@@ -48,10 +48,10 @@ class GroupController extends Controller
     }
 
 
-    public function loadContent($section): View|string
+    public function loadContent($section, $groupId): View|string
     {
         if ($section === "accueil") {
-            $AllListes = Liste::all();
+            $AllListes = Liste::all()->where('group_id', $groupId);
             return view('partials.accueil', compact('AllListes'))->render();
         } elseif ($section === "creation-liste") {
             return view('partials.creation-liste')->render();
