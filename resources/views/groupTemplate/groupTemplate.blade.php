@@ -21,10 +21,12 @@
                 <div class="separate">
                     <h3> Listes des membres :</h3>
                 </div>
-                <div class="block_user">
-                    <h3>{{ auth()->user()->firstname }}</h3>
-                    <h3>{{ auth()->user()->lastname }}</h3>
-                </div>
+                @foreach($users as $user)
+                    <div class="block_user">
+                        <h3>{{ $user->firstname }}</h3>
+                        <h3>{{ $user->lastname }}</h3>
+                    </div>
+                @endforeach
 
 
             </div>
