@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Group\StoreGroupRequest;
 use App\Models\Group;
 use App\Models\Liste;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,8 +14,8 @@ class GroupController extends Controller
 
     public function show(Group $group)
     {
-
-        return view('groupTemplate.groupTemplate', ['group' => $group]);
+        $users = User::all();
+        return view('groupTemplate.groupTemplate', ['group' => $group], compact('users'));
     }
 
 

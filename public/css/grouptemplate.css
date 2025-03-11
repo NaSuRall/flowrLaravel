@@ -101,6 +101,7 @@ body{
     display: flex;
     align-items: center;
     gap: 20px;
+    padding: 20px;
     height: 70px;
     background-color: white;
     width: 100%;
@@ -148,4 +149,73 @@ body{
 .onglets a:hover{
     background-color: #0d6efd;
     color: white;
+}
+dialog {
+    width: 70%;
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    animation: fadeIn 0.3s ease;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+dialog button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3490dc;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+dialog button:hover {
+    background-color: #2779bd;
+}
+
+.block_user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #f8fafc;
+}
+
+.block_user h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #2d3748;
+}
+
+.block_user button {
+    background-color: #38c172;
+}
+
+.block_user button:hover {
+    background-color: #2f9e63;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

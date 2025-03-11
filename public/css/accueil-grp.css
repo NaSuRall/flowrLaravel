@@ -21,9 +21,9 @@
 .group{
     display: flex;
     background-color: #0d6efd;
-    gap: 20px;
+    gap: 10px;
     margin:40px;
-    height: 30vh;
+    height: 10vh;
     width: 30vh;
     border-radius: 10px;
     align-items: center;

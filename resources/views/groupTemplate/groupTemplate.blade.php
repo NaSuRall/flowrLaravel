@@ -29,9 +29,20 @@
 
             </div>
 
-{{--            <div id="divButton">--}}
-{{--                <button class="boutonAjouterMembre">Ajouter des membre</button>--}}
-{{--            </div>--}}
+<div class="dia">
+    <dialog>
+        <button autofocus>Fermer</button>
+        @foreach($users as $user)
+            <div class="block_user">
+                <h3>{{ $user->firstname }}</h3>
+                <h3>{{ $user->lastname }}</h3>
+                <button>Ajouter +</button>
+            </div>
+        @endforeach
+    </dialog>
+    <button>Ajouter au groupe !</button>
+</div>
+
         </div>
         <div id="#mainDivMembreGroup" class="column right">
             <div class="navbar">
@@ -84,6 +95,22 @@
 
                 getData(url, target)
             });
+        });
+
+
+
+        const dialog = document.querySelector("dialog");
+        const showButton = document.querySelector("dialog + button");
+        const closeButton = document.querySelector("dialog button");
+
+        // Le bouton "Afficher la fenêtre" ouvre le dialogue
+        showButton.addEventListener("click", () => {
+            dialog.showModal();
+        });
+
+        // Le bouton "Fermer" ferme le dialogue
+        closeButton.addEventListener("click", () => {
+            dialog.close();
         });
     </script>
 
