@@ -18,6 +18,8 @@ return new class extends Migration
             $table->bigInteger('group_id')->unsigned();
             $table->bigInteger('user_id')->unsigned();
             $table->string('name');
+            $table->string('description');
+            $table->string('Lien');
             $table->timestamps();
 
             // Foreign key

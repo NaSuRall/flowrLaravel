@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\createGroup;
+use App\Http\Controllers\ListeController;
 use App\Http\Controllers\myAccount;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GroupController;
@@ -28,3 +29,5 @@ Route::get('/group/show/{group}', [GroupController::class, 'show'])->name('group
 
 
 Route::get('/group-content/{section}/{groupId}', [GroupController::class, 'loadContent'])->name('loadContent');
+Route::post('/group-content/', [GroupController::class, 'createListe'])->name('create.Liste');
+;

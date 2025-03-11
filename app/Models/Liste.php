@@ -9,5 +9,8 @@ class Liste extends Model
 {
     use HasFactory;
     protected $table = 'lists';
+
+
+    protected $fillable = ['user_id','name', 'description', 'lien'];
     public $timestamps = true;
 }

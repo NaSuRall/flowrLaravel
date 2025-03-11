@@ -11,7 +11,7 @@ class Group extends Model
 
 
 
-    protected $fillable = ['name', 'user_id'];
+    protected $fillable = ['name', 'user_id', 'code'];
 
     public function user()
     {
