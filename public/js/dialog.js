@@ -9,9 +9,11 @@ function getData(url, groupId) {
     if (groupId) {
         urldata += "/" + groupId
     }
+    console.log(urldata)
     $.ajax({
         url: urldata,
         type: "GET",
+        data: "groupId=" + groupId,
         success: function (response) {
             $("#contentArea").html(response);
         },
@@ -23,7 +25,7 @@ function getData(url, groupId) {
 }
 $(document).ready(function () {
     let target = $(this).attr("data-target");
-    let url = "/group-content/accueil"  ;
+    let url = "/group-content/accueil";
     getData(url, currentGroup.value);
 
     $(".nav-link").click(function (e) {
@@ -32,7 +34,7 @@ $(document).ready(function () {
         let target = $(this).attr("data-target");
         let url = "/group-content/" + target;
 
-        getData(url, target)
+        getData(url, currentGroup.value)
     });
 });
 
