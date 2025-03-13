@@ -16,7 +16,8 @@ class GroupController extends Controller
     {
         $users = User::all();
         $group = Group::where('code', $code)->firstOrFail();
-        return view('groupTemplate.groupTemplate', ['group' => $group], compact('users'));
+        $AllListes = Liste::where('group_id', $group->id)->get();
+        return view('groupTemplate.groupTemplate', ['group' => $group], compact('users', 'AllListes'));
     }
 
 
@@ -45,6 +46,7 @@ class GroupController extends Controller
             'name' => $request->input('name'),
             'user_id' => $userId,
             'code' => Group::generateUniqueCode(),
+            'group_id' => $request->input('group_id'),
         ]);
 
         //ajoute l'utilisateur qui a creer le groupe
@@ -57,6 +59,8 @@ class GroupController extends Controller
 
     public function loadContent($section, $groupId): View|string
     {
+//        $AllListes = Liste::where('group_id', $groupId)->get();
+//        return view('groupTemplate.groupTemplate', compact('AllListes'))->render();
         if ($section === "accueil") {
             $AllListes = Liste::where('group_id', $groupId)->get();
             return view('partials.accueil', compact('AllListes'))->render();
