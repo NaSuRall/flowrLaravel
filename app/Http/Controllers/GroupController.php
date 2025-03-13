@@ -14,8 +14,9 @@ class GroupController extends Controller
 
     public function show(Group $group, $code)
     {
-        $users = User::all();
+
         $group = Group::where('code', $code)->firstOrFail();
+        $users = $group->users;
         $AllListes = Liste::where('group_id', $group->id)->get();
         return view('groupTemplate.groupTemplate', ['group' => $group], compact('users', 'AllListes'));
     }
@@ -56,22 +57,6 @@ class GroupController extends Controller
             ->with('success', 'Groupe créé avec succès !');
     }
 
-
-    public function loadContent($section, $groupId): View|string
-    {
-//        $AllListes = Liste::where('group_id', $groupId)->get();
-//        return view('groupTemplate.groupTemplate', compact('AllListes'))->render();
-        if ($section === "accueil") {
-            $AllListes = Liste::where('group_id', $groupId)->get();
-            return view('partials.accueil', compact('AllListes'))->render();
-        } elseif ($section === "creation-liste") {
-
-
-            return view('partials.creation-liste', compact('groupId'))->render();
-        } else {
-            return "<p>Section introuvable</p>";
-        }
-    }
 
     public function createListe(Request $request)
     {

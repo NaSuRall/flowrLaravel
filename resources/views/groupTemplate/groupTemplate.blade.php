@@ -19,7 +19,6 @@
         </div>
 
         <div class="section">
-
             <div class="btn-class-itr">
                 <div class="dia">
                     <dialog id="dialog-membre">
@@ -73,8 +72,6 @@
                     </button>
                 </div>
             </div>
-
-
         </div>
 
 
@@ -90,6 +87,11 @@
                     @foreach($AllListes as $AllListe)
                         <div class="card">
                             <h3>{{ $AllListe->name }}</h3>
+
+                            <div class="comple">
+                                <h3>{{ $AllListe->description }}</h3>
+                                <h3>{{ $AllListe->Lien }}</h3>
+                            </div>
                         </div>
                     @endforeach
                 </div>

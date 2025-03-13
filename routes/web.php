@@ -30,7 +30,7 @@ Route::get('/group/{code}', [GroupController::class, 'show'])->name('group.show'
 Route::post('/group/join', [GroupController::class, 'join'])->name('group.join');
 
 
-
+Route::get('/group-content/{groupId}', [GroupController::class, 'loadContent'])->name('loadContent');
 Route::post('/group', [GroupController::class, 'createListe'])->name('create.Liste');
 
 Route::get('/group-templateV2', [GroupTemplateV2Controller::class, 'index'])->name('groupTemplate');
