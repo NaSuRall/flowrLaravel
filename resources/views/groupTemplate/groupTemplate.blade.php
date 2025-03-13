@@ -19,38 +19,65 @@
         </div>
 
         <div class="section">
+
             <div class="btn-class-itr">
                 <div class="dia">
-                    <dialog>
-                        <button autofocus>Fermer</button>
+                    <dialog id="dialog-membre">
+                        <div class="btnc">
+                            <button id="btn-close-membre" autofocus> X </button>
+                        </div>
                         @foreach($users as $user)
                             <div class="block_user">
                                 <h3>{{ $user->firstname }}</h3>
                                 <h3>{{ $user->lastname }}</h3>
                             </div>
                         @endforeach
-                        <button> Ajouter membre</button>
+                        <div class="code">
+                            <p>Code d'invitation: <span id="tocopy">{{ $group->code }}</span></p>
+                            <input type="button" value="Copier" class="js-copy" data-target="#tocopy">
+                        </div>
                     </dialog>
-                   <button><i class="fa-solid fa-circle-user">Membres</i></button>
+                    <button id="membre">
+                        <i class="fa-solid fa-circle-user">Membres</i>
+                    </button>
                 </div>
 
+                <div class="dia">
+                    <dialog id="dialog-liste">
+                        <div class="btnc">
+                            <button id="btn-close-liste" autofocus> X </button>
+                        </div>
 
-                <i class="fa-solid fa-pencil" id="createListe">Create List</i>
+
+                        <h2>Créer une nouvelle liste</h2>
+                        <form method="POST" action="{{ route('create.Liste') }}">
+                            @csrf
+                            <input type="hidden" name="group_id" value="{{ $group->id }}">
+
+                            <label>Nom de la liste</label>
+                            <input type="text" name="name" required>
+
+                            <label>Description</label>
+                            <input type="text" name="description" required>
+
+                            <label>Lien</label>
+                            <input type="text" name="Lien" required>
+
+                            <button type="submit">Créer</button>
+                        </form>
 
 
+                    </dialog>
+                    <button id="createListe">
+                        <i class="fa-solid fa-pencil"> Create List</i>
+                    </button>
+                </div>
             </div>
+
+
         </div>
 
-        <div class="dia">
-            <dialog>
-                <button autofocus>Fermer</button>
-                <div class="code">
-                    <p>Code du groupe: <span id="tocopy">{{$group->code }}</span></p>
-                    <input type="button" value="Copier" class="js-copy" data-target="#tocopy">
-                </div>
-            </dialog>
-            <button>Ajouter au groupe !</button>
-        </div>
+
 
 
         <div class="separate-title">

@@ -1,55 +1,23 @@
-const currentGroup = document.getElementById("groupID");
 
-function getData(url, groupId) {
-    // if (!target || !url) {
-    //     console.error("Target or URL is not defined.");
-    //     return;
-    // }
-    let urldata = url;
-    if (groupId) {
-        urldata += "/" + groupId
-    }
-    console.log(urldata)
-    $.ajax({
-        url: urldata,
-        type: "GET",
-        data: "groupId=" + groupId,
-        success: function (response) {
-            $("#contentArea").html(response);
-        },
-        error: function (xhr) {
-            console.log(xhr.responseText);
-            $("#contentArea").html("<p>Erreur lors du chargement.</p>");
-        }
-    });
-}
-$(document).ready(function () {
-    let target = $(this).attr("data-target");
-    let url = "/group-content/accueil";
-    getData(url, currentGroup.value);
+const dialogMembre = document.getElementById("dialog-membre");
+const dialogListe = document.getElementById("dialog-liste");
 
-    $(".nav-link").click(function (e) {
-        e.preventDefault();
+const showButtonMembre = document.getElementById("membre");
+const showButtonListe = document.getElementById("createListe");
 
-        let target = $(this).attr("data-target");
-        let url = "/group-content/" + target;
-
-        getData(url, currentGroup.value)
-    });
+const closeButtonMembre = document.getElementById("btn-close-membre");
+const closeButtonListe = document.getElementById("btn-close-liste");
+showButtonMembre.addEventListener("click", () => {
+    dialogMembre.showModal();
+});
+closeButtonMembre.addEventListener("click", () => {
+    dialogMembre.close();
+});
+showButtonListe.addEventListener("click", () => {
+    dialogListe.showModal();
 });
 
-
-
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("dialog + button");
-const closeButton = document.querySelector("dialog button");
-
-// Le bouton "Afficher la fenêtre" ouvre le dialogue
-showButton.addEventListener("click", () => {
-    dialog.showModal();
+closeButtonListe.addEventListener("click", () => {
+    dialogListe.close();
 });
 
-// Le bouton "Fermer" ferme le dialogue
-closeButton.addEventListener("click", () => {
-    dialog.close();
-});

@@ -33,7 +33,7 @@
 
     <div class="dia">
         <dialog>
-            <button autofocus>Fermer</button>
+            <button autofocus><i class="fa-solid fa-xmark"></button>
             <div class="code">
                 <p>Code du groupe: <span id="tocopy">{{$group->code }}</span></p>
                 <input type="button" value="Copier" class="js-copy" data-target="#tocopy">

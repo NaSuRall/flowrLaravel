@@ -107,7 +107,10 @@ body{
     cursor: pointer;
     transition: 0.5s all ease-in-out;
 }
-
+#createListe, #membre{
+    border-radius: 10px;
+    border: none;
+}
 .btn-class-itr i:hover{
     background-color: rgb(75, 159, 255);
 }
@@ -183,4 +186,134 @@ body{
 }
 .addButton i:hover{
     transform: rotate(360deg) ;
+}
+
+
+/* DIALOGUE */
+
+dialog {
+    width: 30%;
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    animation: fadeIn 0.3s ease;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    gap: 20px;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+dialog button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3490dc;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 10px;
+}
+.btnc{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#btn-close{
+    display: flex;
+    align-items: center;
+    background-color: red;
+    align-content: flex-end;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+dialog button:hover {
+    background-color: #2779bd;
+}
+.block_user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #f8fafc;
+}
+
+.block_user h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #2d3748;
+}
+
+
+
+/* CSS FOR DIALOGUE CREATE LIST */
+
+form {
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #3490dc;
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 12px;
+    background-color: #3490dc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+button[type="submit"]:hover {
+    background-color: #57b0ff;
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+    background-color: #3730a3;
+    transform: translateY(0);
 }
