@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\createGroup;
+use App\Http\Controllers\GroupTemplateV2Controller;
 use App\Http\Controllers\ListeController;
 use App\Http\Controllers\myAccount;
 use Illuminate\Support\Facades\Route;
@@ -31,4 +32,5 @@ Route::post('/group/join', [GroupController::class, 'join'])->name('group.join')
 
 Route::get('/group-content/{section}/{groupId}', [GroupController::class, 'loadContent'])->name('loadContent');
 Route::post('/group', [GroupController::class, 'createListe'])->name('create.Liste');
-;
+
+Route::get('/group-templateV2', [GroupTemplateV2Controller::class, 'index'])->name('groupTemplate');

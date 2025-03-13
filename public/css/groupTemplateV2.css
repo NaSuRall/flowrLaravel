@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "annimation.css";
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
+body{
+    background: linear-gradient(90deg, #ffffff, #beddff, #e3ecff);
+    background-size: 300% 300%;
+    animation: movingGradient 10s infinite alternate ease-in-out;
+    backdrop-filter: blur(10px);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    background-color: #0d6efd;
+    margin: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+.icon i{
+    font-size: 30px;
+    color: #fff;
+}
+.icon:hover{
+    width: 70px;
+    height: 70px;
+}
+.header{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-around;
+}
+.title{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    width: 100%;
+}
+.title h2{
+    font-size: 2.5rem;
+    color: rgb(27, 111, 211);
+}
+.title a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgb(27, 111, 211);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2em;
+    transition: 0.5s all ease-in-out;
+}
+.title a:hover{
+    transform: rotate(-360deg);
+}
+
+/*  SECTION BTN ITR */
+
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+}
+.btn-class-itr{ display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    gap: 30px;
+}
+.btn-class-itr i {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgb(27, 111, 211);
+    border-radius: 10px;
+    color: #fff;
+    gap: 10px;
+    width: 320px;
+    height: 70px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+}
+
+.btn-class-itr i:hover{
+    background-color: rgb(75, 159, 255);
+}
+
+/* Section Affiche All Listes */
+
+.contente{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+}
+.section-aff-liste{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    overflow-y: scroll;
+    align-items: center;
+}
+.separate-title{
+    padding: 10px;
+    background-color: white;
+}
+.separate-title h2{
+    font-size: 1.8em;
+    border-bottom: 5px solid black;
+}
+.all-listes{
+    display: flex;
+    align-content: flex-start;
+
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 20px;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17%;
+    height: 70px;
+    background-color: rgb(27, 111, 211);
+    color: white;
+    border-radius: 10px;
+    transition: 0.3s all ease-in-out;
+}
+.card:hover{
+    background-color: #0dcaf0;
+}
+
+.addButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: rgb(115, 0, 255);
+    height: 50px;
+    width: 50px;
+    border-radius: 35px;
+}
+
+
+.addButton i{
+    color: white;
+    transition: 1s all ease-in-out;
+}
+.addButton i:hover{
+    transform: rotate(360deg) ;
+}
