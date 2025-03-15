@@ -1,8 +1,7 @@
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     *{
-        margin: 0;
-        padding: 0;
-        font-family: "Arvo", serif;
+        font-family: "Poppins", serif;
     }
     /* Sidenav menu */
     .sidenav {
@@ -31,7 +30,7 @@
         margin-left: 20px;
         transition: 0.3s;
         position: relative;
-        font-family: "Arvo", serif;
+        font-family: "Poppins", serif;
     }
 
     .sidenav a::after {
@@ -82,7 +81,6 @@
         width: 35px;
         height: 5px;
         background-color: black;
-        margin: 6px 0;
         z-index: 2;
         margin-left: 20px;
     }
@@ -114,9 +112,7 @@
             <li><a href="{{ route('home')}}">Accueil</a></li>
             <li><a href="{{ route('groups') }}">Gestion de liste</a></li>
             <li><a href="{{ route('createGroup') }}">Créer une liste</a></li>
-            <li><a href="#">Abonnement</a></li>
-            <li><a href="#">Catalogue</a></li>
-
+            <li><a href="{{ route('joinGroup') }}">Rejoindre un groupe</a></li>
         </ul>
     </div>
     <div id="fleche">
@@ -129,11 +125,8 @@
             @else
             <li><a href="{{ url('login')}}">Se Connecter</a></li>
             @endif
-            <li><a href="#">Mon Pannier</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Aide</a></li>
-            <li><a href="#">Info</a></li>
-
         </ul>
     </div>
     <div class="logout">

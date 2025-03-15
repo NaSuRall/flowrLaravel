@@ -9,9 +9,9 @@
        <div class="profil">
            @if(auth()->id())
            <div class="gif">
-               <div class="round" id="round">
+               <a class="round" id="round" href="{{ route('myAccount') }}">
                    <img src="{{ asset('img/profil.svg') }}">
-               </div>
+               </a>
                <div class="card">
                    <button type="submit" id="cart"><i class="fa-solid fa-cart-shopping"></i></button>
                </div>
@@ -57,8 +57,8 @@
                 </div>
             </a>
 
-            <a class="button" id="abonnementButton">
-                <h3>ABONNEMENT</h3>
+            <a class="button" id="abonnementButton" href="{{ route('joinGroup') }}">
+                <h3>REJOINDRE UN GROUPE</h3>
                 <div class="img-block">
                     <img src="{{ asset('img/png3.svg')}}">
                 </div>
@@ -211,4 +211,6 @@
         </div>
     </div>
 
+
+    @include('components.footer')
 @endsection

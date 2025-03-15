@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "annimation.css";
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
 .container{
     display: flex;
     align-items: center;
@@ -54,7 +62,6 @@
     outline: none;
     border-radius: 10px;
     font-size: 1.2em;
-    font-family: "Arvo", serif;
 }
 .form-upload button:hover{
     background-color: rgba(78, 154, 246, 0.91);
@@ -65,7 +72,7 @@
     cursor: pointer;
     padding: 10px 20px 10px 20px;
     font-size: 1.2em;
-    font-family: "Arvo", serif;
+    font-family: "Poppins", serif;
 
 }
 .round-picture{
@@ -103,7 +110,7 @@
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
-
+    font-family: "Poppins", serif;
 }
 .information-compte{
     margin-top: 50px;
@@ -116,6 +123,7 @@
     background-color: #f1f1f1;
     border-radius: 10px;
     padding: 20px 0px 20px 0px;
+    font-family: "Poppins", serif;
 }
 .bloc-renseignement{
     border-top: .1px solid black;
@@ -126,7 +134,7 @@
     flex-direction: row;
     height: 100%;
     width: 100%;
-
+    font-family: "Poppins", serif;
 }
 .colum-rens{
     display: flex;
@@ -136,10 +144,11 @@
     width: 100%;
     height: 100%;
     padding: 20px;
-
+    font-family: "Poppins", serif;
 }
 .colum-rens h1{
     font-size: 1.5em;
+    font-family: "Poppins", serif;
 }
 .btn-user{
     display: flex;
@@ -156,8 +165,9 @@
     outline: none;
     border-radius: 10px;
     font-size: 1.2em;
+    font-family: "Poppins", serif;
 }
 .btn-user h2{
     font-size: 1.5em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", serif;
 }

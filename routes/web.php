@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\createGroup;
 use App\Http\Controllers\GroupTemplateV2Controller;
+use App\Http\Controllers\JoinGroupController;
 use App\Http\Controllers\ListeController;
 use App\Http\Controllers\myAccount;
 use Illuminate\Support\Facades\Route;
@@ -27,7 +28,8 @@ Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
 Route::get('/groups', [GroupController::class, 'index'])->middleware('auth')->name('groups');
 Route::post('/group/save', [GroupController::class, 'save'])->name('group.save');
 Route::get('/group/{code}', [GroupController::class, 'show'])->name('group.show');
-Route::post('/group/join', [GroupController::class, 'join'])->name('group.join');
+Route::post('/group/join', [JoinGroupController::class, 'join'])->name('group.join');
+Route::get('/join/group', [JoinGroupController::class, 'index'])->name('joinGroup');
 
 
 Route::get('/group-content/{groupId}', [GroupController::class, 'loadContent'])->name('loadContent');

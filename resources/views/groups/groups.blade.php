@@ -17,16 +17,15 @@
                     <a class="group" href="{{ route('group.show', ['code' => $group->code]) }}">
                         <h3>{{ $group->name }}</h3>
                         <div class="img-block">
-                            <img src="">
+                         <h2>Code d'invitation :  {{ $group->code}}</h2>
                         </div>
                     </a>
                 @endforeach
-            <div class="but">
-                <div class="addButton">
-                    <a href="{{route('createGroup')}}"><i class="fa-solid fa-plus"></i></a>
+                <div class="but">
+                    <div class="addButton">
+                        <a href="{{route('createGroup')}}"><i class="fa-solid fa-plus"></i></a>
+                    </div>
                 </div>
-            </div>
-
             </div>
 
             <div class="joinGroup">

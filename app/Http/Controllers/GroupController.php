@@ -50,7 +50,7 @@ class GroupController extends Controller
             'group_id' => $request->input('group_id'),
         ]);
 
-        //ajoute l'utilisateur qui a creer le groupe
+
         $group->users()->attach($userId);
 
         return redirect()->route('group.show', ['code' => $group->code])
@@ -84,29 +84,6 @@ class GroupController extends Controller
     }
 
 
-    public function join(Request $request)
-    {
-        $request->validate([
-            'code' => 'required|string|size:5',
-        ]);
 
-        $group = Group::where('code', $request->code)->first();
-
-        if (!$group) {
-            return redirect()->back()->with('error', 'Ce code de groupe est invalide.');
-        }
-
-        $user = auth()->user();
-
-        //verifie si l'utilkateur est deja dans le groupe
-        if ($group->users()->where('user_id', $user->id)->exists()) {
-            return redirect()->back()->with('error', 'Vous êtes déjà membre de ce groupe.');
-        }
-
-        //ajoute l'utilisateur dans le groupe avec la table pivot
-        $group->users()->attach($user->id);
-
-        return redirect()->route('group.show', ['code' => $group->code])->with('success', 'Vous avez rejoint le groupe avec succès !');
-    }
 
 }

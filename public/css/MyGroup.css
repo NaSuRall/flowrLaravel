@@ -44,14 +44,22 @@ body{
     font-size: 1.8em;
     color:white;
 }
+.group h2{
+    text-align: center;
+    color: white;
+}
 
 .mainContent{
+
     border-top: black solid 3px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     margin: 50px;
     flex-wrap: wrap;
 }
+
 
 .addButton{
     display: flex;
