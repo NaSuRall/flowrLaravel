@@ -21,7 +21,7 @@ Route::get('/createGroup', [createGroup::class, 'index'])->middleware('auth')->n
 Route::get('/groupeTemplate', [GroupTemplateController::class, 'index'])->middleware('auth')->name('groupeTemplate');
 
 Route::get('/myAccount', [myAccount::class, 'index'])->name('myAccount')->middleware('auth');;
-Route::get('/myAccount', [myAccount::class, 'myAccount'])->name('myAccount');
+Route::get('/myAccount', [myAccount::class, 'myAccount'])->name('myAccount')->middleware('auth');
 Route::get('/createGroup', [createGroup::class, 'index'])->name('createGroup');
 Route::get('/groupeTemplate', [GroupTemplateController::class, 'index'])->name('groupeTemplate');
 Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
@@ -37,6 +37,10 @@ Route::get('/group-content/{groupId}', [GroupController::class, 'loadContent'])-
 Route::post('/group', [GroupController::class, 'createListe'])->name('create.Liste');
 
 Route::get('/group-templateV2', [GroupTemplateV2Controller::class, 'index'])->name('groupTemplate');
+Route::put('/myAccount/update/{id}', [myAccount::class, 'update'])->name('myAccount.update');
+Route::post('/update-profile-image', [myAccount::class, 'updateProfileImage'])->name('update.profile.image');
+
+
 
 
 

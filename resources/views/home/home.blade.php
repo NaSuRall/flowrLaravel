@@ -10,7 +10,7 @@
            @if(auth()->id())
            <div class="gif">
                <a class="round" id="round" href="{{ route('myAccount') }}">
-                   <img src="{{ asset('img/profil.svg') }}">
+                   <img src="{{ asset(auth()->user()->profile_image ?? 'img/avatar1.svg') }}" alt="Photo de profil">
                </a>
                <div class="card">
                    <button type="submit" id="cart"><i class="fa-solid fa-cart-shopping"></i></button>

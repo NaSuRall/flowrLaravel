@@ -1,3 +1,21 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const dialogName = document.getElementById("dialog-editName");
+    const showButtonEditName = document.getElementById("editName");
+    const closeButtonEditName = document.getElementById("btn-close-editName");
+
+    if (showButtonEditName && dialogName && closeButtonEditName) {
+        showButtonEditName.addEventListener("click", () => {
+            dialogName.showModal();
+        });
+
+        closeButtonEditName.addEventListener("click", () => {
+            dialogName.close();
+        });
+    } else {
+        console.error("Un élément est introuvable dans le DOM.");
+    }
+});
+
 
 const dialogMembre = document.getElementById("dialog-membre");
 const dialogListe = document.getElementById("dialog-liste");
@@ -20,4 +38,3 @@ showButtonListe.addEventListener("click", () => {
 closeButtonListe.addEventListener("click", () => {
     dialogListe.close();
 });
-
