@@ -171,3 +171,82 @@
     font-size: 1.5em;
     font-family: "Poppins", serif;
 }
+
+/* Style général de la boîte de dialogue */
+dialog {
+    width: 40%;
+    max-width: 500px;
+    background: white;
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Quand la boîte est affichée */
+dialog[open] {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Bouton de fermeture */
+.btnc {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#btn-close-editName {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+#btn-close-editName:hover {
+    background: darkred;
+}
+
+/* Contenu du formulaire */
+.updateName {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.updateName label {
+    font-weight: bold;
+}
+
+.updateName input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.updateName button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.updateName button:hover {
+    background: #0056b3;
+}
