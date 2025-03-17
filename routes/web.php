@@ -37,4 +37,6 @@ Route::post('/group', [GroupController::class, 'createListe'])->name('create.Lis
 
 Route::get('/group-templateV2', [GroupTemplateV2Controller::class, 'index'])->name('groupTemplate');
 Route::put('/myAccount/update/{id}', [myAccount::class, 'update'])->name('myAccount.update');
+Route::post('/update-profile-image', [myAccount::class, 'updateProfileImage'])->name('update.profile.image');
+
 

@@ -39,6 +39,20 @@ class myAccount extends Controller
 
         \App\Models\User::whereId($id)->update($validatedData);
 
-        return redirect('/myAccount')->with('success', 'Voiture mise à jour avec succèss');
+        return redirect('/myAccount');
     }
+
+    public function updateProfileImage(Request $request)
+    {
+        $request->validate([
+            'profile_image' => 'required|string',
+        ]);
+
+        $user = Auth::user();
+        $user->profile_image = $request->profile_image;
+        $user->save();
+
+        return redirect()->back();
+    }
+
 }

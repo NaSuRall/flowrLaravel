@@ -11,15 +11,25 @@
 <div class="container">
     <div class="logo"><img src="{{ asset('img/FlowrLogo.png') }}" alt=""></div>
     <div class="head-picture-name">
-        <div class="left-picture column-picture-name">
-            <div class="round-picture">
-                <img src="{{ asset('img/profil.svg') }}" alt="">
-            </div>
-            <form action="" method="post" class="form-upload">
-                <input type="file" name="image" id="image" required>
-                <button>Changer de Photo de Profil</button>
-            </form>
+        <div class="round-picture">
+            <img src="{{ asset($user->profile_image ?? 'img/avatar1.svg') }}" alt="Photo de profil">
         </div>
+
+        <form action="{{ route('update.profile.image') }}" method="POST">
+            @csrf
+            <label for="profile_image">Choisir une photo :</label>
+            <select name="profile_image" id="profile_image">
+                <option>-- Choisissez une photo de profil</option>
+                <option value="img/avatars/avatar1.svg">Avatar 1</option>
+                <option value="img/avatars/avatar2.svg">Avatar 2</option>
+                <option value="img/avatars/avatar3.svg">Avatar 3</option>
+                <option value="img/avatars/avatar4.svg">Avatar 4</option>
+                <option value="img/avatars/avatar5.svg">Avatar 5</option>
+                <option value="img/avatars/avatar6.svg">Avatar 6</option>
+            </select>
+            <button type="submit">Changer</button>
+        </form>
+
 
         <div class="right-name column-picture-name">
             <div class="renseignements-personnels">
@@ -36,7 +46,7 @@
                                         <button id="btn-close-editName" autofocus> X </button>
                                     </div>
                                     <div class="updateName">
-                                        <form method="post" action="{{ route('myAccount.update', $user->id ) }}">
+                                        <form class="formUpadte" method="post" action="{{ route('myAccount.update', $user->id ) }}">
                                             @csrf
                                             @method('PUT')
                                             <label for="firstname" class="col-md-4 col-form-label text-md-end">{{ __('Prénom') }}</label>
