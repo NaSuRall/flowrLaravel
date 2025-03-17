@@ -39,9 +39,6 @@ class GroupController extends Controller
         }
 
         $userId = auth()->id();
-        $request->validate([
-            'name' => 'required|string|max:10|unique:groups,name',
-        ]);
 
         $group = Group::create([
             'name' => $request->input('name'),
