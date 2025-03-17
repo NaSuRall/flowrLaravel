@@ -125,7 +125,7 @@
             @else
             <li><a href="{{ url('login')}}">Se Connecter</a></li>
             @endif
-            <li><a href="#">Contact</a></li>
+            <li><a href="{{ url('contact-support') }}">Contact</a></li>
             <li><a href="#">Aide</a></li>
         </ul>
     </div>

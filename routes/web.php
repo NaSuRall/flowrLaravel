@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\createGroup;
 use App\Http\Controllers\GroupTemplateV2Controller;
 use App\Http\Controllers\JoinGroupController;
@@ -40,12 +41,11 @@ Route::get('/group-templateV2', [GroupTemplateV2Controller::class, 'index'])->na
 Route::put('/myAccount/update/{id}', [myAccount::class, 'update'])->name('myAccount.update');
 Route::post('/update-profile-image', [myAccount::class, 'updateProfileImage'])->name('update.profile.image');
 
-
-
+Route::get('/contact-support', [ContactController::class, 'index'])->name('contact.support');
+Route::post('/contact-support', [ContactController::class, 'contactFromUser'])->name('contact.form');
 
 
 // liste template
 
-
 Route::get('/liste-template/{id}/{code}', [listeTemplateController::class, 'index'])->name('listeTemplate');
-Route::post('/liste-template/{id}/{code}', [listeTemplateController::class, 'create'])->name('create.tem.liste');
+Route::post('/liste-template/{id}/{code}', [listeTemplateController::class, 'create'])->middleware('auth')->name('create.tem.liste');
