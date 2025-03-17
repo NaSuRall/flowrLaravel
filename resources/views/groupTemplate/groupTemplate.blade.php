@@ -8,7 +8,7 @@
 @section('content')
     <input type="hidden" value="{{ $group->id }}" id="groupID">
     <div class="container">
-        <div class="icon"><i class="fa-solid fa-comment"></i></div>
+
 
         <div class="header">
             <div class="title">
@@ -83,7 +83,7 @@
         <div class="section-aff-liste">
             <div class="all-listes">
                 @foreach($AllListes as $AllListe)
-                    <a href="{{ route('listeTemplate', ['id' => $AllListe->id]) }}" class="card">
+                    <a href="{{ route('listeTemplate', ['id' => $AllListe->id, 'code'=>$group->code]) }}" class="card">
                         <h3>{{ $AllListe->name }}</h3>
 
                         <div class="comple">

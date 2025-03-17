@@ -43,4 +43,5 @@ Route::get('/group-templateV2', [GroupTemplateV2Controller::class, 'index'])->na
 // liste template
 
 
-Route::get('/liste-template/{id}', [listeTemplateController::class, 'index'])->name('listeTemplate');
+Route::get('/liste-template/{id}/{code}', [listeTemplateController::class, 'index'])->name('listeTemplate');
+Route::post('/liste-template/{id}/{code}', [listeTemplateController::class, 'create'])->name('create.tem.liste');

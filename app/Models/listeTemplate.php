@@ -11,6 +11,6 @@ class listeTemplate extends Model
     protected $table = 'liste_template';
 
 
-    protected $fillable = ['liste_id','user_id','name', 'description', 'Lien'];
+    protected $fillable = ['liste_id','user_id','name', 'description', 'lien'];
     public $timestamps = true;
 }

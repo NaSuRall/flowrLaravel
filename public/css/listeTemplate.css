@@ -1,0 +1,151 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "annimation.css";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+.py-4{
+    width: 100%;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, #ffffff, #a6cdf8, #e3ecff);
+    background-size: 300% 300%;
+    animation: movingGradient 10s infinite alternate ease-in-out;
+    backdrop-filter: blur(10px);
+
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    width: 100%;
+    padding: 20px;
+}
+.title h2{
+    font-size: 2.5rem;
+    color: rgb(27, 111, 211);
+}
+.title a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgb(27, 111, 211);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2em;
+    transition: 0.5s all ease-in-out;
+}
+.title a:hover{
+    transform: rotate(-360deg);
+}
+
+.cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    width: 80%;
+    height: 800px;
+    background-color: white;
+    border-radius:10px ;
+}
+
+.template-list {
+    width: 70%;
+    border: 2px solid #e7e7e7;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.template-list h3 {
+    margin-bottom: 15px;
+    color: rgb(27, 111, 211);
+    font-size: 1.5rem;
+}
+
+.template-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.template-list .cadeaux {
+    padding: 10px;
+    background-color: #e3ecff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.cadeaux h2{
+    font-size: 1em;
+    width: 400px;
+}
+.cadeaux h2 span{
+    color: #1b6fd3;
+}
+.cadeaux{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-direction: row;
+}
+
+.template-list li:hover {
+    background-color: #a6cdf8;
+}
+
+
+.template-form {
+    width: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.template-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1b6fd3;
+    font-weight: bold;
+}
+
+.template-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #a6cdf8;
+    border-radius: 5px;
+}
+
+.template-form button {
+    padding: 10px 20px;
+    background-color: rgb(27, 111, 211);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.template-form button:hover {
+    background-color: #1a5ba8;
+}
+
+

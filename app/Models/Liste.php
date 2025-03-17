@@ -13,4 +13,9 @@ class Liste extends Model
 
     protected $fillable = ['group_id','user_id','name', 'description', 'Lien'];
     public $timestamps = true;
+
+    public function listeTemplates()
+    {
+        return $this->hasMany(listeTemplate::class, 'liste_id');
+    }
 }

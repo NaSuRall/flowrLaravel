@@ -17,7 +17,7 @@ return new class extends Migration
             $table->bigInteger('user_id')->unsigned();
             $table->string('name');
             $table->string('description');
-            $table->string('lien');
+            $table->string('lien')->nullable();
             $table->timestamps();
 
 
