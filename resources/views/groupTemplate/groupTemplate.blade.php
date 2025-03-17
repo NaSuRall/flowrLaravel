@@ -75,31 +75,32 @@
         </div>
 
 
+<div class="section-content">
+    <div class="separate-title">
+        <h2>Listes Du groupe :</h2>
+    </div>
+    <div class="contente">
+        <div class="section-aff-liste">
+            <div class="all-listes">
+                @foreach($AllListes as $AllListe)
+                    <div class="card">
+                        <h3>{{ $AllListe->name }}</h3>
 
-
-        <div class="separate-title">
-            <h2>Listes Du groupe :</h2>
-        </div>
-        <div class="contente">
-
-            <div class="section-aff-liste">
-                <div class="all-listes">
-                    @foreach($AllListes as $AllListe)
-                        <div class="card">
-                            <h3>{{ $AllListe->name }}</h3>
-
-                            <div class="comple">
-                                <h3>{{ $AllListe->description }}</h3>
-                                <h3>{{ $AllListe->Lien }}</h3>
-                            </div>
+                        <div class="comple">
+                            <h3>{{ $AllListe->description }}</h3>
+                            <h3>{{ $AllListe->Lien }}</h3>
                         </div>
-                    @endforeach
-                </div>
-                <div class="addButton">
-                    <a href="{{route('createGroup')}}"><i class="fa-solid fa-plus"></i></a>
-                </div>
+                    </div>
+                @endforeach
             </div>
         </div>
+    </div>
+</div>
+
+
+
+
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

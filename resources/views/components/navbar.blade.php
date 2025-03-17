@@ -110,8 +110,8 @@
     <div  id="navListe1" class="navListe">
         <ul>
             <li><a href="{{ route('home')}}">Accueil</a></li>
-            <li><a href="{{ route('groups') }}">Gestion de liste</a></li>
-            <li><a href="{{ route('createGroup') }}">Créer une liste</a></li>
+            <li><a href="{{ route('groups') }}">Gestion des groupes</a></li>
+            <li><a href="{{ route('createGroup') }}">Créer  un groupe</a></li>
             <li><a href="{{ route('joinGroup') }}">Rejoindre un groupe</a></li>
         </ul>
     </div>
