@@ -9,7 +9,7 @@ class JoinGroupController extends Controller
 {
 
     public function index(){
-        return view('joinGroup');
+        return view('JoinGroup');
     }
 
     public function join(Request $request)
