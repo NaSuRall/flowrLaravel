@@ -59,7 +59,7 @@
                                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email',$user->email) }}" required autocomplete="email">
 
                                             <label for="tel" class="col-md-4 col-form-label text-md-end">{{ __('Telephone') }}</label>
-                                            <input id="tel" type="text" class="form-control @error('tel') is-invalid @enderror" name="tel" value="{{ old('firstname', $user->tel) }}" required autocomplete="tel" autofocus maxlength="10">
+                                            <input id="tel" type="text" class="form-control @error('tel') is-invalid @enderror" name="tel" value="{{ old('firstname', $user->tel) }}" autofocus maxlength="10">
 
                                             <button type="submit">Modifier</button>
                                         </form>

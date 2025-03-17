@@ -34,7 +34,7 @@ class myAccount extends Controller
             'firstname' => 'required|max:255',
             'lastname' => 'required|max:255',
             'email' => 'required|email|max:255',
-            'tel'=> 'required|max:255',
+            'tel'=> 'max:255',
         ]);
 
         \App\Models\User::whereId($id)->update($validatedData);
