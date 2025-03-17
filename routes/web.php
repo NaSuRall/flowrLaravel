@@ -4,6 +4,7 @@ use App\Http\Controllers\createGroup;
 use App\Http\Controllers\GroupTemplateV2Controller;
 use App\Http\Controllers\JoinGroupController;
 use App\Http\Controllers\ListeController;
+use App\Http\Controllers\listeTemplateController;
 use App\Http\Controllers\myAccount;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GroupController;
@@ -36,3 +37,10 @@ Route::get('/group-content/{groupId}', [GroupController::class, 'loadContent'])-
 Route::post('/group', [GroupController::class, 'createListe'])->name('create.Liste');
 
 Route::get('/group-templateV2', [GroupTemplateV2Controller::class, 'index'])->name('groupTemplate');
+
+
+
+// liste template
+
+
+Route::get('/liste-template/{id}', [listeTemplateController::class, 'index'])->name('listeTemplate');

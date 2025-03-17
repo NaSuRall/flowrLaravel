@@ -83,14 +83,14 @@
         <div class="section-aff-liste">
             <div class="all-listes">
                 @foreach($AllListes as $AllListe)
-                    <div class="card">
+                    <a href="{{ route('listeTemplate', ['id' => $AllListe->id]) }}" class="card">
                         <h3>{{ $AllListe->name }}</h3>
 
                         <div class="comple">
                             <h3>{{ $AllListe->description }}</h3>
                             <h3>{{ $AllListe->Lien }}</h3>
                         </div>
-                    </div>
+                    </a>
                 @endforeach
             </div>
         </div>
