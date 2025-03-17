@@ -14,6 +14,11 @@ class listeTemplateController extends Controller
         $liste = Liste::findOrFail($id);
         $templates = listeTemplate::where('liste_id', $id)->get();
 
+        if ($liste->user_id != auth()->id()) {
+            // Si ce n'est pas le cas, on ne permet pas d'ajouter un composant
+            return view('listeTemplate.listeTemplate', compact('liste','group', 'templates'))->with('error', 'Vous ne pouvez pas ajouter de composants à cette liste.');
+        }
+
         return view('listeTemplate.listeTemplate', compact('liste', 'group', 'templates'));
     }
 

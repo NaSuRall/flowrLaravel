@@ -29,22 +29,28 @@
 
             <!-- Formulaire de création -->
             <div class="template-form" style="width: 30%; padding: 20px;">
-                <form method="POST" action="{{ route('create.tem.liste', ['id' => $liste->id, 'code' => $group->code]) }}">
-                    @csrf
-                    <input type="hidden" name="liste_id" value="{{ $liste->id }}">
-                    <input type="hidden" name="group_code" value="{{ $group->code }}">
+                @if(auth()->id() == $liste->user_id)
+                    <!-- Afficher le formulaire pour ajouter un composant -->
+                    <form method="POST" action="{{ route('create.tem.liste', ['id' => $liste->id, 'code' => $group->code]) }}">
+                        @csrf
+                        <input type="hidden" name="liste_id" value="{{ $liste->id }}">
+                        <input type="hidden" name="group_code" value="{{ $group->code }}">
 
-                    <label>Nom de l'idée de cadeaux</label>
-                    <input type="text" name="name" required>
+                        <label>Nom de l'idée de cadeaux</label>
+                        <input type="text" name="name" required>
 
-                    <label>Description / prix</label>
-                    <input type="text" name="description" required>
+                        <label>Description / prix</label>
+                        <input type="text" name="description" required>
 
-                    <label>Lien (si possible )</label>
-                    <input type="text" name="lien">
+                        <label>Lien (si possible )</label>
+                        <input type="text" name="lien">
 
-                    <button type="submit">Créer</button>
-                </form>
+                        <button type="submit">Créer</button>
+                    </form>
+                @else
+                    <p>Vous ne pouvez pas ajouter de composants à cette liste.</p>
+                @endif
+
             </div>
         </div>
     </div>
