@@ -19,7 +19,7 @@ return new class extends Migration
             $table->bigInteger('user_id')->unsigned();
             $table->string('name');
             $table->string('description');
-            $table->string('Lien');
+            $table->string('Lien')->nullable();
             $table->timestamps();
 
             // Foreign key

@@ -183,6 +183,7 @@ body{
     overflow: hidden;
     padding: 10px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 /* Style du titre */
