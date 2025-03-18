@@ -220,7 +220,7 @@ dialog button:hover {
     }
 }
 
-@media screen and (max-width: 1608px) {
+@media screen and (max-width: 1300px) {
 
     .container{
         display: none;
