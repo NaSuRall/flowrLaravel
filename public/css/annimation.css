@@ -3,7 +3,7 @@
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-
+/*animation: apparition 2s  alternate ease-in-out;*/
 @keyframes apparition {
     0% {opacity: 0;}
     50% {opacity: 0.8;}
@@ -24,4 +24,28 @@
     100%{
         transform: rotate(360deg);
     }
+}
+
+
+@keyframes apparitionWelcome {
+    0% { opacity: 0;}
+    50% { opacity: 0.8;}
+    100% { opacity: 1;}
+}
+@keyframes apparitionTo {
+    0% { opacity: 0;}
+    50% { opacity: 0;}
+    70% { opacity: 0.5;}
+    100% { opacity: 1;}
+}
+
+@keyframes apparitionToLeft {
+
+    0% { opacity: 0;}
+    50% { opacity: 0;}
+    60% { opacity: 0;}
+    80% { opacity: 0;}
+    90% { opacity: 0.5;}
+    100% { opacity: 1;}
+
 }

@@ -61,6 +61,7 @@
     height: 800px;
     background-color: white;
     border-radius:10px ;
+    animation: apparition 2s  alternate ease-in-out;
 }
 
 .template-list {

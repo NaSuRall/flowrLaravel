@@ -7,8 +7,10 @@
 @section('content')
 
 <div id="loader">
+    <h1 id="App1">Bienvenue</h1>
+    <h1 id="App2">Sur</h1>
+    <h1 id="App3">Flowr</h1>
     <img src="{{ asset('img/FlowrLogo.png') }}" alt="Logo" id="loader-logo">
-    <h1>Flowr</h1>
 </div>
 
     <div class="container">

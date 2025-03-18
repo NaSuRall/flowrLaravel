@@ -364,6 +364,7 @@ h1 span, h3 span{
 #loader {
     position: fixed;
     width: 100%;
+    flex-direction: column;
     height: 100vh;
     background: #ffffff;
     display: flex;
@@ -373,10 +374,18 @@ h1 span, h3 span{
     transition: opacity 1s ease-out;
 }
 #loader h1{
-    font-size: 5em;
-    color: #0dcaf0;
+    font-size: 8em;
+    color: #000000;
 }
-
+#App1{
+    animation: apparition 2s  alternate ease-in-out;
+}
+#App2{
+    animation: apparition 5s  alternate ease-in-out;
+}
+#App3{
+    animation: apparition 7s  alternate ease-in-out;
+}
 /* Contenu caché au début */
 #content {
     display: none;

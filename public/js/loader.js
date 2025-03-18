@@ -5,5 +5,5 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("loader").style.display = "none"; // Cache définitivement
             document.getElementById("content").style.display = "block"; // Affiche le contenu
         }, 1000); // Attends la fin du fondu
-    }, 1500); // Laisse le logo tourner avant le fondu
+    }, 2500); // Laisse le logo tourner avant le fondu
 });
