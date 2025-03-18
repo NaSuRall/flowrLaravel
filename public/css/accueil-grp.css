@@ -48,7 +48,7 @@
     display: none;
 }
 
-@media screen and (max-width: 1608px) {
+@media screen and (max-width: 1500px) {
 
     .container{
         display: none;
