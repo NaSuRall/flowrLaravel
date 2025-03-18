@@ -19,6 +19,7 @@ body{
 }
 .round{
     width: 80px;
+    height: 80px;
     cursor: pointer;
     background-color: #d7d7d7;
     border-radius: 50%;
@@ -220,7 +221,7 @@ h1 span, h3 span{
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.82);
     padding: 20px;
     margin-top: 70px;
 }
@@ -232,6 +233,7 @@ h1 span, h3 span{
     width: 100%;
     height: 100%;
     padding: 20px;
+
 }
 #abo{
     display: flex;
@@ -312,6 +314,18 @@ h1 span, h3 span{
     background-color: rgba(27, 111, 211, 0.91);
     border: none;
     outline: none;
+    color: #ffffff;
+    gap: 10px;
+    font-size: 1.5em;
+    font-family: "Arvo", serif;
+    padding: 20px 40px 20px 40px;
+    width: 100%;
+    transition: .2s all ease-in-out;
+}
+.abonnementPanier a{
+    background-color: rgba(27, 111, 211, 0.91);
+    border: none;
+    outline: none;
     cursor: pointer;
     color: #ffffff;
     font-size: 1.5em;
@@ -319,16 +333,20 @@ h1 span, h3 span{
     padding: 20px 40px 20px 40px;
     width: 100%;
     transition: .2s all ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
-.abonnementPanier button:hover{
-    background-color: rgba(78, 154, 246, 0.91);
-    color: black;
-}
-.abonnementPanier button:active{
-    background-color: #dadada;
-    color: white;
+.abonnementPanier a:hover{
+
+    background-color: rgba(99, 170, 255, 0.91);
+    color: #ffffff;
 }
 
+.seed{
+    opacity: 0.5;
+}
 .tel{
     display: none;
 }

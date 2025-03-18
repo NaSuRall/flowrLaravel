@@ -93,13 +93,14 @@
         <div id="blockAbonnement" class="block">
             <h2>Nos offres Abonnements</h2>
             <div id="listeAbonnement">
-                <div id="abo" class="abonnement">
+                <div id="abo" class="abonnement  popular">
+                    <h4>Le plus populaire</h4>
                     <div class="texte">
                         <h3>Standard</h3>
                         <p class="prix">GRATUIT</p>
                         <ul>
-                            <li><i class="fa-solid fa-check"></i> limites de membre : 6</li>
-                            <li><i class="fa-solid fa-check"></i> limites de groupes : 2</li>
+                            <li><i class="fa-solid fa-check"></i> limites de membre : ∞</li>
+                            <li><i class="fa-solid fa-check"></i> limites de groupes : ∞</li>
                             <li><i class="fa-solid fa-check"></i> Accès au catalogue</li>
                             <li id="no">- Création listes ilimiter/pers</li>
                             <li id="no">- Indication Acheter sur liste</li>
@@ -107,12 +108,14 @@
                         </ul>
                         <div class="abonnementPanier">
 
-                            <button type="submit"> Ajouter au Panier <i class="fa-solid fa-cart-shopping"></i></button>
+                            <a type="submit" href="{{ route('myAccount') }}"> Voir mon Abonnement</a>
                         </div>
                     </div>
                 </div>
-                <div id="abo" class="abonnement popular">
-                    <h4>Le plus populaire</h4>
+
+
+                <div id="abo" class="abonnement seed">
+
                     <div class="texte">
                         <h3>Famille</h3>
                         <p class="prix">9.99$/ans</p>
@@ -130,7 +133,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="abo" class="abonnement">
+                <div id="abo" class="abonnement seed">
                     <div class="texte">
                         <h3>Entreprise</h3>
                         <p class="prix">19.99$/ans</p>
