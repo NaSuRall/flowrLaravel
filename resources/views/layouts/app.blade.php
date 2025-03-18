@@ -1,8 +1,18 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="fr">
 <head>
-    <meta charset="utf-8" lang="fr">
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Romain Poulain, Samuel Galliani-Royer">
+    <meta name="description" content="Flowr est une plateforme simple et conviviale qui vous permet de créer, partager et organiser des listes de cadeaux pour toutes les occasions.">
+    <meta name="keywords" content="groupe, flowr, membres, cadeaux, listes, créer, rejoindre, gestion, création">
+    <meta property="og:title" content="Flowr">
+    <meta property="og:description" content="Flowr est une plateforme simple et conviviale pour créer, partager et organiser des listes de cadeaux.">
+    <meta property="og:url" content="https://flowr.space">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://flowr.space">
+
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

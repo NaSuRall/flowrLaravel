@@ -6,10 +6,6 @@
 
 @section('content')
 
-{{--    <div id="loader">--}}
-{{--        <div class="spinner"></div>--}}
-{{--    </div>--}}
-
 <div id="loader">
     <img src="{{ asset('img/FlowrLogo.png') }}" alt="Logo" id="loader-logo">
     <h1>Flowr</h1>
@@ -43,10 +39,8 @@
         <div id="titre" class="block">
             @if( auth()->id())
                 <h1>Bienvenue {{ auth()->user()->firstname }} sur <span>FLOWR</span> !</h1>
-                <h2><span>Flowr</span></h2>
             @else
                 <h1>Bienvenue sur <span>FLOWR</span></h1>
-                <h2><span>Flowr</span></h2>
             @endif
             <h3>Le site incontournable pour faire ses listes de cadeaux</h3>
         </div>
@@ -57,21 +51,21 @@
                 <a class="button" href="{{ url('groups') }}">
                     <h3>MES GROUPES</h3>
                     <div class="img-block">
-                        <img src="{{ asset('img/png1.svg')}}">
+                        <img src="{{ asset('img/png1.svg')}}" alt="img photo 1">
                     </div>
                 </a>
 
                 <a class="button jaune" href="{{ url('createGroup') }}">
                     <h3>CRÉER UN GROUPE</h3>
                     <div class="img-block">
-                        <img src="{{ asset('img/png2.svg')}}">
+                        <img src="{{ asset('img/png2.svg')}}" alt="img pnjs2">
                     </div>
                 </a>
 
                 <a class="button" id="abonnementButton" href="{{ route('joinGroup') }}">
                     <h3>REJOINDRE UN GROUPE</h3>
                     <div class="img-block">
-                        <img src="{{ asset('img/png3.svg')}}">
+                        <img src="{{ asset('img/png3.svg')}}" alt="Img pnj 3">
                     </div>
                 </a>
 
@@ -167,7 +161,7 @@
 
     <div class="tel">
         <div class="img-force">
-            <img src="{{ asset('img/bg-tel.png') }}" alt="">
+            <img src="{{ asset('img/bg-tel.png') }}" alt="Image tel logo">
         </div>
     </div>
 
