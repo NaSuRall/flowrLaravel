@@ -119,6 +119,7 @@ h1 span, h3 span{
 #blockButton h3 {
     font-size: 30px;
     text-align: center;
+    padding: 10px;
 }
 
 .button{
