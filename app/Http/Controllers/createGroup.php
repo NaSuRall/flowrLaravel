@@ -10,8 +10,6 @@ class createGroup extends Controller
 {
     public function index()
     {
-
-
         return view('createGroup.createGroup');
     }
 
