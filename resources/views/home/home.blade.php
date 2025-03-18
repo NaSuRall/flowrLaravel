@@ -6,6 +6,15 @@
 
 @section('content')
 
+{{--    <div id="loader">--}}
+{{--        <div class="spinner"></div>--}}
+{{--    </div>--}}
+
+<div id="loader">
+    <img src="{{ asset('img/FlowrLogo.png') }}" alt="Logo" id="loader-logo">
+    <h1>Flowr</h1>
+</div>
+
     <div class="container">
 
         <div class="profil">
@@ -161,4 +170,7 @@
             <img src="{{ asset('img/bg-tel.png') }}" alt="">
         </div>
     </div>
+
+
+    <script src="{{ asset('js/loader.js') }}"></script>
 @endsection
