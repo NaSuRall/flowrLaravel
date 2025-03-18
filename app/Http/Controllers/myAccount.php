@@ -13,14 +13,11 @@ class myAccount extends Controller
 {
     public function index()
     {
-        return view('myAccount.myAccount');
-    }
-
-    public function myAccount()
-    {
         $user = Auth::user();
         return view('myAccount.myAccount', compact('user'));
     }
+
+
 
     public function edit($id)
 
