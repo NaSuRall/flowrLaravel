@@ -16,7 +16,7 @@
 /*backdrop-filter: blur(10px);*/
 
 
-
+/*animation: tourner 2s ease-in-out forwards;*/
 @keyframes tourner {
     0% {
         transform: rotate(0deg);

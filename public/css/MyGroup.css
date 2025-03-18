@@ -10,6 +10,9 @@ body{
     background-color: #f4f5ff;
     height: 100%;
 }
+.titre{
+    animation: apparition 1s  alternate ease-in-out;
+}
 .titre h1{
     color: black;
     font-family: "Arvo", serif;

@@ -81,6 +81,7 @@ body{
     width: 100%;
     height: 100px;
     padding: 20px;
+    animation: apparition 1s  alternate ease-in-out;
 }
 .btn-class-itr{ display: flex;
     align-items: center;
@@ -122,6 +123,7 @@ body{
     justify-content: center;
     flex-direction: column;
     padding: 50px;
+    animation: apparition 2s  alternate ease-in-out;
 
 }
 .contente{

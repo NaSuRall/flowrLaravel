@@ -15,12 +15,13 @@
         <div class="cont">
             <!-- Liste des Templates -->
             <div class="template-list" style="width: 70%; padding: 20px;">
-                <h3>Templates existants</h3>
+                <h3>Cadeaux existants</h3>
                 <ul>
                     @foreach ($templates as $template)
                         <div class="cadeaux">
                         <h2><span>Nom : </span>{{ $template->name }} </h2>
                         <h2><span>Description : </span> {{ $template->description }}</h2>
+                        <h2><span>Lien : </span> {{ $template->lien }}</h2>
                         </div>
 
                     @endforeach
@@ -47,6 +48,11 @@
 
                         <button type="submit">Créer</button>
                     </form>
+
+                    <div class="img">
+                        <img src="{{ asset('img/FlowrLogo.png') }}" alt="">
+                        <h2>Flowr</h2>
+                    </div>
                 @else
                     <p>Vous ne pouvez pas ajouter de composants à cette liste.</p>
                 @endif

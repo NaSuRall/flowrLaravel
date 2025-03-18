@@ -11,8 +11,6 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-
-
     background: linear-gradient(90deg, #ffffff, #a6cdf8, #e3ecff);
     background-size: 300% 300%;
     animation: movingGradient 10s infinite alternate ease-in-out;
@@ -32,6 +30,7 @@
     font-size: 4em;
     font-family: "Arvo", serif;
     padding-bottom: 50px;
+    animation: apparition 2s  alternate ease-in-out;
 }
 
 .titre .input-Groupe-Name{
@@ -42,6 +41,7 @@
     border:none;
     text-decoration: none;
     outline: none;
+    animation: apparition 2s  alternate ease-in-out;
 }
 .form-name-group{
     display: flex;
@@ -62,6 +62,7 @@
     color: white;
     width: 80px;
     height: 60px;
+    animation: apparition 2s  alternate ease-in-out;
 
 }
 .form-name-group button .fa-regular{
