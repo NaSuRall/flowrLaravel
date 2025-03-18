@@ -7,11 +7,13 @@ use App\Http\Controllers\JoinGroupController;
 use App\Http\Controllers\ListeController;
 use App\Http\Controllers\listeTemplateController;
 use App\Http\Controllers\myAccount;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GroupTemplateController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Mail\Test;
 
 Auth::routes();
 
@@ -44,6 +46,10 @@ Route::post('/update-profile-image', [myAccount::class, 'updateProfileImage'])->
 Route::get('/contact-support', [ContactController::class, 'index'])->name('contact.support');
 Route::post('/contact-support', [ContactController::class, 'contactFromUser'])->name('contact.form');
 
+Route::get('/test-email', function () {
+    Mail::to('contact.flowr.space@gmail.com')->send(new test());
+    return 'Email envoyé avec succès !';
+})->name('test.email');
 
 // liste template
 

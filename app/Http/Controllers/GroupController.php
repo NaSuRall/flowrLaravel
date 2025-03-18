@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Group\StoreGroupRequest;
+use App\Mail\groupCreateMail;
 use App\Models\Group;
 use App\Models\Liste;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class GroupController extends Controller
 {
@@ -46,6 +48,8 @@ class GroupController extends Controller
             'code' => Group::generateUniqueCode(),
             'group_id' => $request->input('group_id'),
         ]);
+
+        Mail::to(auth()->user()->email)->send(new groupCreateMail($group));
 
 
         $group->users()->attach($userId);
