@@ -79,7 +79,7 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 200px;
+    height: 100px;
     padding: 20px;
 }
 .btn-class-itr{ display: flex;
@@ -310,13 +310,12 @@ dialog button {
 #btn-close{
     display: flex;
     align-items: center;
-    background-color: red;
     align-content: flex-end;
     justify-content: center;
     flex-direction: row-reverse;
 }
 dialog button:hover {
-    background-color: #2779bd;
+    background-color: #ff0000;
 }
 .block_user {
     display: flex;
@@ -397,6 +396,35 @@ button[type="submit"]:active {
     background-color: #3730a3;
     transform: translateY(0);
 }
+
+.code{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.code p{
+    font-size: 1.2em;
+    padding: 20px;
+}
+.code input{
+    background-color: rgba(27, 111, 211, 0.91);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-family: "Arvo", serif;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    transition: .2s all ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
 
 .tel{
     display: none;

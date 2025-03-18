@@ -66,7 +66,7 @@
 
                     </dialog>
                     <button id="createListe">
-                        <i class="fa-solid fa-pencil"> Create List</i>
+                        <i class="fa-solid fa-pencil"> Cree Liste</i>
                     </button>
                 </div>
             </div>
