@@ -18,7 +18,7 @@
             <img src="{{ asset($user->profile_image ?? 'img/avatars/avatar1.svg') }}" alt="Photo de profil">
         </div>
 
-        <form action="{{ route('update.profile.image') }}" method="POST">
+        <form action="{{ route('update.profile.image') }}" method="POST" class="formProfileAvatar">
             @csrf
             <label for="profile_image">Choisir une photo :</label>
             <select name="profile_image" id="profile_image">

@@ -126,11 +126,12 @@
             <li><a href="{{ url('login')}}">Se Connecter</a></li>
             @endif
             <li><a href="{{ url('contact-support') }}">Contact</a></li>
-            <li><a href="#">Aide</a></li>
         </ul>
     </div>
     <div class="logout">
+        @if(auth()->id())
         <a href="{{ route('logout') }}">Deconnexion</a>
+        @endif
     </div>
 </div>
 

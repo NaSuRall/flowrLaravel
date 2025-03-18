@@ -14,7 +14,7 @@
                 <h1>Rejoindre un Groupe !</h1>
                 <form action="{{ route('group.join') }}" method="POST" class="form-name-group">
                     @csrf
-                    <input type="text" name="code" placeholder="Entrez le code du groupe" class="input-Groupe-Name" maxlength="11" required>
+                    <input type="text" name="code" placeholder="Entrez le code du groupe..." class="input-Groupe-Name" maxlength="11" required>
                     <button class="create-name-groupe-form" type="submit"><i class="fa-regular fa-paper-plane"></i></button>
                 </form>
             </div>
