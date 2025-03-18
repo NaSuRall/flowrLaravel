@@ -60,8 +60,7 @@ class GroupController extends Controller
         $request->validate([
             'group_id' => 'required|integer|exists:groups,id',
             'name' => 'required|string|max:10',
-            'description' => 'required|string|max:255',
-            'Lien' => 'required|string|max:255',
+            'description' => 'required|string|max:255'
         ]);
         $group = Group::where('id', $request->input('group_id'))->firstOrFail();
 
@@ -73,8 +72,7 @@ class GroupController extends Controller
             'group_id' => $request->input('group_id'),
             'user_id' => auth()->id(),
             'name' => $request->input('name'),
-            'description' => $request->input('description'),
-            'Lien' => $request->input('Lien'),
+            'description' => $request->input('description')
         ]);
 
         return redirect()->route('group.show', $group->code );

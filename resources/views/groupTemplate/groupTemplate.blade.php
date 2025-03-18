@@ -54,13 +54,11 @@
                             <input type="hidden" name="group_id" value="{{ $group->id }}">
 
                             <label>Nom de la liste</label>
-                            <input type="text" name="name" required>
+                            <input type="text" name="name" placeholder="Entrer le nom de la liste..." required>
 
                             <label>Description</label>
-                            <input type="text" name="description" required>
+                            <input type="text" name="description" placeholder="Ex : liste de cadeaux pour noel..." required>
 
-                            <label>Lien</label>
-                            <input type="text" name="Lien" required>
 
                             <button type="submit">Créer</button>
                         </form>
