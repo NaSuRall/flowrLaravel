@@ -12,7 +12,7 @@
     <div class="logo"><img src="{{ asset('img/FlowrLogo.png') }}" alt=""></div>
     <div class="head-picture-name">
         <div class="round-picture">
-            <img src="{{ asset($user->profile_image ?? 'img/avatar1.svg') }}" alt="Photo de profil">
+            <img src="{{ asset($user->profile_image ?? 'img/avatars/avatar1.svg') }}" alt="Photo de profil">
         </div>
 
         <form action="{{ route('update.profile.image') }}" method="POST">
