@@ -6,9 +6,12 @@
 @endsection
 
 @section('content')
-@include('components.navbar');
+
 
 <div class="container">
+
+    @include('components.navbar');
+
     <div class="logo"><img src="{{ asset('img/FlowrLogo.png') }}" alt=""></div>
     <div class="head-picture-name">
         <div class="round-picture">
@@ -101,6 +104,13 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+
+<div class="tel">
+    <div class="img-force">
+        <img src="{{ asset('img/bg-tel.png') }}" alt="">
     </div>
 </div>
 <script src="{{ asset('js/dialog.js') }}"></script>

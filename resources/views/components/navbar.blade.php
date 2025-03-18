@@ -27,7 +27,7 @@
         color: #ffffff;
         display: block;
         margin-right: 20px;
-        margin-left: 20px;
+        margin-left: 10px;
         transition: 0.3s;
         position: relative;
         font-family: "Poppins", serif;

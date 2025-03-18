@@ -101,6 +101,11 @@
 
     </div>
 
+    <div class="tel">
+        <div class="img-force">
+            <img src="{{ asset('img/bg-tel.png') }}" alt="">
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ asset('js/copy.js') }}"></script>
     <script src="{{ asset('js/dialog.js') }}"></script>

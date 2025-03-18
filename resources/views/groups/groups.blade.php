@@ -6,8 +6,9 @@
 
 @section('content')
 
-    @include('components.navbar')
+
     <div class="container">
+        @include('components.navbar')
         <div class="titre">
             <h1>MES GROUPES</h1>
 
@@ -30,5 +31,10 @@
         </div>
     </div>
 
+    <div class="tel">
+        <div class="img-force">
+            <img src="{{ asset('img/bg-tel.png') }}" alt="">
+        </div>
+    </div>
 
 @endsection

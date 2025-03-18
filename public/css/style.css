@@ -377,7 +377,7 @@ h1 span, h3 span{
 }
 .popular {
     border: 5px solid red;
-    position: relative; /* Permet au badge de se positionner par rapport à cette div */
+    position: relative;
 }
 
 .popular h4 {
@@ -442,140 +442,125 @@ h1 span, h3 span{
     color: white;
 }
 
-
-
-/* 📱 Mobile (moins de 600px) */
-@media (max-width: 599px) {
- #titre{
-     width: 100%;
-     height: 100%;
- }
-#titre h1{
-     display: none;
- }
-#titre h2{
-    visibility: visible;
- }
-#titre h3{
-    visibility: hidden;
-}
-#mySidenav{
-    visibility: hidden;
- }
-#blockButton{
-    width: 100%;
-    height: 100%;
-}
-#mainButton{
-    flex-direction: column;
-}
-.button{
-    width: 90%;
-    height: 100%;
-}
-#blockButton h3{
-        font-size: 1.5em;
-        padding: 10px;
- }
-.partie-pres{
-    flex-direction: column;
-    height: 100%;
-
-}
-#presentation{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    margin: 10px;
-
+.tel{
+    display: none;
 }
 
-    .partie-pres {
-        height: auto;
-        padding: 40px 20px;
+/* ----- Responsive Design ----- */
+@media screen and (max-width: 1608px) {
+
+    .container{
+        display: none;
     }
-
-    #presentation {
-        width: 95%;
-        padding: 15px;
-        box-shadow: 20px -10px rgba(27, 111, 211, 0.91);
-    }
-
-    #textePrez {
-        font-size: 18px;
-        line-height: 1.4;
-        height: auto;
-        width: 100%;
-        margin: 0;
-    }
-
-    #presentation h2 {
-        font-size: 22px;
-        text-align: center;
-    }
-
-    #textePrez h3 {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    #blockAbonnement h2 {
+    .tel{
         display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2em;
-        text-align: center;
-    }
-    #blockAbonnement{
-        height: 100%;
-    }
-    #listeAbonnement {
-        flex-direction: column;
-        align-items: center;
         width: 100%;
+        height: 100vh;
+        background-color: white;
     }
-
-    #abo {
+    .img-force img{
         width: 100%;
-        max-width: 350px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
 
-    .popular h4 {
-        font-size: 0.9em;
-        padding: 6px;
-    }
-
-    .abonnementPanier button {
-        font-size: 1.2em;
-        padding: 12px 20px;
-    }
-    .profil{
-        visibility: hidden;
     }
 
 }
 
-/* 📱📟 Tablette portrait (600px à 767px) */
-@media (min-width: 600px) and (max-width: 767px) {
 
-}
 
-/* 💻 Tablette paysage et petits écrans (768px à 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
 
-}
+/*#ordi{*/
+/*    display: none;*/
+/*}*/
+/* .no-co{*/
+/*     margin-top: 20px;*/
+/* }*/
+/* .no-co a{*/
+/*     font-size: 1em;*/
+/* }*/
+/*#titre{*/
+/*    height: 20vh;*/
+/*}*/
+/*#titre h1{*/
+/*   display: none;*/
+/*}*/
+/*#titre h2{*/
+/*    visibility: visible;*/
+/*    color: #0d6efd;*/
+/*    font-size: 4em;*/
+/*}*/
+/*#titre h3{*/
+/*   display: none;*/
+/*}*/
+/*.profil{*/
+/*    position: absolute;*/
+/*    top: 10px;*/
+/*    right: 10px;*/
+/*}*/
+/*.round{*/
+/*    width: 70px;*/
+/*}*/
+/*#blockButton{*/
+/*    height: 100%;*/
+/*}*/
+/*    #blockButton h3{*/
+/*    font-size: 1.2em;*/
+/*}*/
+/*#mainButton {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+/*.button{*/
+/*    width: 100%;*/
+/*    height: 200px;*/
 
-/* 🖥️ Ordinateurs portables et écrans moyens (1024px à 1279px) */
-@media (min-width: 1024px) and (max-width: 1279px) {
-    .button{
-        width: 280px;
-        height: 200px;
-    }
-}
+/*}*/
+/*.partie-pres{*/
+/*height: 100%;*/
+/*}*/
 
-/* 🖥️ Grands écrans et desktops (1280px et plus) */
-@media (min-width: 1280px) {
+/*#presentation{*/
+/*    margin: 0px;*/
+/*    box-shadow: none;*/
+/*    display: flex;*/
+/*    width: 100%;*/
+/*    flex-direction: column;*/
+/*}*/
+/*#presentation h2{*/
+/*    font-size: 35px;*/
+/*}*/
+/*#textePrez{*/
+/*    height: 100%;*/
+/*}*/
+/*#textePrez h3{*/
+/*    font-size: 1em;*/
+/*}*/
+/*#textePrez p{*/
+/*    font-size: 15px;*/
+/*}*/
 
-}
+/*#blockAbonnement{*/
+/*    margin-top: 50px;*/
+/*      height: 100%;*/
+/*}*/
+/*#listeAbonnement{*/
+/*    width: 100%;*/
+/*    flex-direction: column;*/
+/*}*/
+/*#abo{*/
+/*    width: 100%;*/
+/*}*/
+/*#abo h3{*/
+/*    font-size: 1.5em;*/
+/*}*/
+/*.texte ul li{*/
+/*    font-size: 0.9em;*/
+/*}*/
+/*    .abonnementPanier button{*/
+/*        font-size: 1em;*/
+/*    }*/
+/*    #blockAbonnement h2{*/
+/*        font-size: 1.7em;*/
+/*    }*/
+/*.card{*/
+/*    display: none;*/
+/*}*/
