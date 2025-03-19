@@ -37,7 +37,7 @@
                         <div class="form-group">
                             <label for="lastname" class="col-md-4 col-form-label text-md-end">{{ __('Nom de Famille') }}</label>
 
-                            <input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus>
+                            <input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus maxlength="20" required autofocus>
                             @error('lastname')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

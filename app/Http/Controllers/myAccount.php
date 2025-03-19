@@ -17,22 +17,12 @@ class myAccount extends Controller
         return view('myAccount.myAccount', compact('user'));
     }
 
-
-
-    public function edit($id)
-
-    {
-        $users = users::findOrFail($id);
-
-        return view('edit', compact('users'));
-    }
-
+    // Met a jour les information de l'utilisateur
     public function update(Request $request, $id)
     {
-        // Trouve l'utilisateur
+
         $user = auth::user();
 
-        // Validation des données
         $validatedData = $request->validate([
             'firstname' => 'required|max:255',
             'lastname' => 'required|max:255',
@@ -41,9 +31,9 @@ class myAccount extends Controller
         ]);
 
         // Mise à jour de l'utilisateur
-        \App\Models\User::whereId($id)->update($validatedData);
+        User::whereId($id)->update($validatedData);
 
-        // Envoi de l'email avec l'utilisateur mis à jour
+        // Envoi de l'email avec l'utilisateur mis a jour
         Mail::to($user->email)->send(new UpdateAccountMail($user));
 
         return redirect('/myAccount');
@@ -53,11 +43,11 @@ class myAccount extends Controller
     public function updateProfileImage(Request $request)
     {
         $request->validate([
-            'profile_image' => 'required|string',
+            'profileImage' => 'required|string',
         ]);
 
         $user = Auth::user();
-        $user->profile_image = $request->profile_image;
+        $user->profile_image = $request->profileImage;
         $user->save();
 
         return redirect()->back();

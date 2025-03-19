@@ -12,6 +12,7 @@ class ContactController extends Controller
         return view('contact');
     }
 
+    // Sauvegarde dans la bdd le formulaire de l'utilisateur
     public function contactFromUser(Request $request)
     {
         $request->validate([
@@ -20,11 +21,13 @@ class ContactController extends Controller
             'pieceJointe' => 'nullable|file|mimes:jpg,jpeg,png,pdf|max:2048',
         ]);
 
+        //Permet de recuperer la piece jointe si elle existe
         $filePath = null;
         if ($request->hasFile('pieceJointe')) {
             $filePath = $request->file('pieceJointe')->store('support_files', 'public');
         }
 
+        // Envoie les donnees à la bdd
         Support::create([
             'user_id' => Auth::id(),
             'email'=> Auth::user()->email,

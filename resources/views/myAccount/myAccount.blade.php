@@ -13,16 +13,16 @@
     @include('components.navbar');
 
     <div class="logo"><img src="{{ asset('img/FlowrLogo.png') }}" alt=""></div>
-    <div class="head-picture-name">
-        <div class="round-picture">
+    <div class="containerEnfant">
+        <div class="imageProfile">
             <img src="{{ asset($user->profile_image ?? 'img/avatars/avatar1.svg') }}" alt="Photo de profil">
         </div>
 
-        <form action="{{ route('update.profile.image') }}" method="POST">
+        <form action="{{ route('update.profile.image') }}" method="POST" class="formProfileAvatar">
             @csrf
-            <label for="profile_image">Choisir une photo :</label>
-            <select name="profile_image" id="profile_image">
-                <option>-- Choisissez une photo de profil</option>
+            <label for="profileImage">Choisir une photo :</label>
+            <select name="profileImage" id="profileImage">
+                <option value="img/avatars/avatar1.svg">-- Choisissez une photo de profil</option>
                 <option value="img/avatars/avatar1.svg">Avatar 1</option>
                 <option value="img/avatars/avatar2.svg">Avatar 2</option>
                 <option value="img/avatars/avatar3.svg">Avatar 3</option>
@@ -34,19 +34,19 @@
         </form>
 
 
-        <div class="right-name column-picture-name">
-            <div class="renseignements-personnels">
+        <div class="rightName columnPictureName">
+            <div class="renseignementsPersonnels">
                 <h2><i class="fa-solid fa-house"></i> Information du Compte : </h2>
 
                 <div class="information-compte">
-                    <div class="bloc-renseignement">
-                        <div class="colum-rens">
+                    <div class="blocRenseignement">
+                        <div class="columRens">
                             <h1>Prénom :</h1>
-                            <div class="btn-user">
+                            <div class="btnUser">
                                 <h2>{{  $user->firstname }}</h2>
-                                <dialog id="dialog-editName">
+                                <dialog id="dialogModifNom">
                                     <div class="btnc">
-                                        <button id="btn-close-editName" autofocus> X </button>
+                                        <button id="btnCloseModifNom" autofocus> X </button>
                                     </div>
                                     <div class="updateName">
                                         <form class="formUpadte" method="post" action="{{ route('myAccount.update', $user->id ) }}">
@@ -72,33 +72,33 @@
                         </div>
                     </div>
 
-                    <div class="bloc-renseignement">
-                        <div class="colum-rens">
+                    <div class="blocRenseignement">
+                        <div class="columRens">
                             <h1>Nom :</h1>
-                            <div class="btn-user">
+                            <div class="btnUser">
                                 <h2>{{  $user->lastname }}</h2>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bloc-renseignement">
-                        <div class="colum-rens">
+                    <div class="blocRenseignement">
+                        <div class="columRens">
                             <h1>email :</h1>
-                            <div class="btn-user">
+                            <div class="btnUser">
                                 <h2>{{  $user->email }}</h2>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bloc-renseignement">
-                        <div class="colum-rens">
+                    <div class="blocRenseignement">
+                        <div class="columRens">
                             <h1>Téléphone :</h1>
-                            <div class="btn-user">
+                            <div class="btnUser">
                                <h2>{{  $user->tel }}</h2>
                             </div>
                         </div>
                     </div>
-                    <button id="editName">
+                    <button id="modifNom">
                         Modifier<i class="fa-solid fa-pencil"></i>
                     </button>
                 </div>
@@ -110,7 +110,7 @@
 
 <div class="tel">
     <div class="img-force">
-        <img src="{{ asset('img/bg-tel.png') }}" alt="">
+        <img src="{{ asset('img/bg-tel.png') }}" alt="Site indisponible">
     </div>
 </div>
 <script src="{{ asset('js/dialog.js') }}"></script>

@@ -15,9 +15,9 @@
     <div class="formContact">
         <form id="contactForm" action="{{ route('contact.form') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <input type="text" name="object" placeholder="Entrer le sujet de votre demande" required>
-            <textarea name="description" placeholder="Écrivez votre demande" required></textarea>
-            <input type="file" name="pieceJointe">
+            <input class="inputUser" type="text" name="object" placeholder="Entrer le sujet de votre demande" required>
+            <textarea class="inputUser" name="description" placeholder="Écrivez votre demande" required></textarea>
+            <input id="pieceJointe" class="inputUser" type="file" name="pieceJointe">
             <button type="submit">Envoyer</button>
         </form>
     </div>

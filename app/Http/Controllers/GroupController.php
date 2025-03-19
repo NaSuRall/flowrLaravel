@@ -32,7 +32,7 @@ class GroupController extends Controller
     }
 
 
-    // Fonction pour crée un Groupe
+    // Creer le groupe et l'envoie dans la bdd
     public function save(Request $request)
     {
         // On Verifie si l'utilisateur est bien connecté
@@ -47,6 +47,7 @@ class GroupController extends Controller
         $group = Group::create([
             'name' => $request->input('name'),
             'user_id' => $userId,
+            // Genere un code unique pour le groupe
             'code' => Group::generateUniqueCode(),
             'group_id' => $request->input('group_id'),
         ]);
@@ -54,7 +55,7 @@ class GroupController extends Controller
         // on envoie un email de confirmation à l'utilisateur après la création du groupe
         Mail::to(auth()->user()->email)->send(new groupCreateMail($group));
 
-        // Ajoute le créateur du groupe comme membre du groupe
+        // ajoute automatiquement l'utilisateur qui a créer le groupe
         $group->users()->attach($userId);
 
         // et on redirige vers la page du groupe créé avec son code
