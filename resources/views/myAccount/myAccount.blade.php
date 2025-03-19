@@ -14,24 +14,28 @@
 
     <div class="logo"><img src="{{ asset('img/FlowrLogo.png') }}" alt=""></div>
     <div class="containerEnfant">
-        <div class="imageProfile">
-            <img src="{{ asset($user->profile_image ?? 'img/avatars/avatar1.svg') }}" alt="Photo de profil">
+
+        <div class="img">
+            <div class="imageProfile">
+                <img src="{{ asset($user->profile_image ?? 'img/avatars/avatar1.svg') }}" alt="Photo de profil">
+            </div>
+
+            <form action="{{ route('update.profile.image') }}" method="POST" class="formProfileAvatar">
+                @csrf
+                <label for="profileImage">Choisir une photo :</label>
+                <select name="profileImage" id="profileImage">
+                    <option value="img/avatars/avatar1.svg">-- Choisissez une photo de profil</option>
+                    <option value="img/avatars/avatar1.svg">Avatar 1</option>
+                    <option value="img/avatars/avatar2.svg">Avatar 2</option>
+                    <option value="img/avatars/avatar3.svg">Avatar 3</option>
+                    <option value="img/avatars/avatar4.svg">Avatar 4</option>
+                    <option value="img/avatars/avatar5.svg">Avatar 5</option>
+                    <option value="img/avatars/avatar6.svg">Avatar 6</option>
+                </select>
+                <button type="submit">Changer</button>
+            </form>
         </div>
 
-        <form action="{{ route('update.profile.image') }}" method="POST" class="formProfileAvatar">
-            @csrf
-            <label for="profileImage">Choisir une photo :</label>
-            <select name="profileImage" id="profileImage">
-                <option value="img/avatars/avatar1.svg">-- Choisissez une photo de profil</option>
-                <option value="img/avatars/avatar1.svg">Avatar 1</option>
-                <option value="img/avatars/avatar2.svg">Avatar 2</option>
-                <option value="img/avatars/avatar3.svg">Avatar 3</option>
-                <option value="img/avatars/avatar4.svg">Avatar 4</option>
-                <option value="img/avatars/avatar5.svg">Avatar 5</option>
-                <option value="img/avatars/avatar6.svg">Avatar 6</option>
-            </select>
-            <button type="submit">Changer</button>
-        </form>
 
 
         <div class="rightName columnPictureName">
