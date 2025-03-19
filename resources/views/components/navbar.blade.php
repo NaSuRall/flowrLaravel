@@ -5,7 +5,7 @@
     }
     /* Sidenav menu */
     .sidenav {
-        height: 98%;
+        height: 90%;
         width: 250px;
         position: fixed;
         top: 0;
@@ -13,7 +13,7 @@
         background-color: rgb(27, 111, 211);
         padding-top: 40px;
         transition: left 0.5s ease;
-        margin-top: 5px;
+        margin-top: 20px;
         border-bottom-right-radius: 10px;
         border-top-right-radius: 10px;
         z-index: 4;
@@ -21,11 +21,12 @@
 
 
     .sidenav a {
-        padding: 8px 0;
+        padding: 10px 0;
         text-decoration: none;
         font-size: 25px;
         color: #ffffff;
         display: block;
+        margin-top:10px;
         margin-right: 20px;
         margin-left: 10px;
         transition: 0.3s;
