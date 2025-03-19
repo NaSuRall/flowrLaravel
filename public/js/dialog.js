@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const dialogName = document.getElementById("dialog-editName");
-    const showButtonEditName = document.getElementById("editName");
-    const closeButtonEditName = document.getElementById("btn-close-editName");
+    const dialogName = document.getElementById("dialogModifNom");
+    const showButtonEditName = document.getElementById("modifNom");
+    const closeButtonEditName = document.getElementById("btnCloseModifNom");
 
     if (showButtonEditName && dialogName && closeButtonEditName) {
         showButtonEditName.addEventListener("click", () => {

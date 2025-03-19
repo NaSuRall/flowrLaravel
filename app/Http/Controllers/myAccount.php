@@ -53,11 +53,11 @@ class myAccount extends Controller
     public function updateProfileImage(Request $request)
     {
         $request->validate([
-            'profile_image' => 'required|string',
+            'profileImage' => 'required|string',
         ]);
 
         $user = Auth::user();
-        $user->profile_image = $request->profile_image;
+        $user->profile_image = $request->profileImage;
         $user->save();
 
         return redirect()->back();

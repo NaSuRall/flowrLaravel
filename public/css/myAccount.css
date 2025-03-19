@@ -14,7 +14,7 @@
     width: 100%;
     height: 100vh;
 }
-.head-picture-name{
+.containerEnfant{
     display: flex;
     width: 100%;
     height: 100%;
@@ -68,13 +68,13 @@
     font-family: "Poppins", serif;
 
 }
-.round-picture{
+.imageProfile{
     width: 200px;
     height: 200px;
     background-size: cover;
     border-radius: 50%;
 }
-.round-picture img{
+.imageProfile img{
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -87,13 +87,13 @@
     flex-direction: column;
 }
 
-.head-picture-name:after {
+.containerEnfant:after {
     content: "";
     display: table;
     clear: both;
 }
 
-.renseignements-personnels{
+.renseignementsPersonnels{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,7 +116,7 @@
     border-radius: 10px;
     font-family: "Poppins", serif;
 }
-.bloc-renseignement{
+.blocRenseignement{
     border-bottom: 1px solid black;
     display: flex;
     align-items: center;
@@ -126,7 +126,7 @@
     width: 100%;
     font-family: "Poppins", serif;
 }
-.colum-rens{
+.columRens{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -136,17 +136,17 @@
     padding: 20px;
     font-family: "Poppins", serif;
 }
-.colum-rens h1{
+.columRens h1{
     font-size: 1.5em;
     font-family: "Poppins", serif;
 }
-.btn-user{
+.btnUser{
     display: flex;
     align-items: center;
     flex-direction: row;
     gap: 40px;
 }
-.btn-user button{
+.btnUser button{
     padding: 10px 20px 10px 20px;
     color: #ffffff;
     text-decoration: none;
@@ -157,12 +157,12 @@
     font-size: 1.2em;
     font-family: "Poppins", serif;
 }
-.btn-user h2{
+.btnUser h2{
     font-size: 1.5em;
     font-family: "Poppins", serif;
 }
 
-#editName{
+#modifNom{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -172,7 +172,7 @@
     font-size: 25px;
 }
 
-#editName:hover{
+#modifNom:hover{
     background-color: rgba(78, 154, 246, 0.91);
 }
 
@@ -206,7 +206,7 @@ dialog[open] {
     justify-content: flex-end;
 }
 
-#btn-close-editName {
+#btnCloseEditName {
     background: red;
     color: white;
     border: none;
@@ -216,7 +216,7 @@ dialog[open] {
     border-radius: 50%;
 }
 
-#btn-close-editName:hover {
+#btnCloseEditName:hover {
     background: darkred;
 }
 
@@ -284,7 +284,7 @@ dialog[open] {
     background: white;
 }
 
-.formProfileAvatar button, #editName{
+.formProfileAvatar button, #modifNom{
     padding: 10px 20px;
     color: white;
     background: #007bff;
@@ -295,7 +295,7 @@ dialog[open] {
     transition: background 0.3s ease-in-out;
 }
 
-.formProfileAvatar button:hover, #editName:hover {
+.formProfileAvatar button:hover, #modifNom:hover {
     background: #0056b3;
 }
 
