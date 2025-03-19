@@ -35,6 +35,8 @@ body{
     flex-direction: column;
     text-decoration: none;
     transition: .5s all ease-in-out;
+    justify-content: center;
+    padding: 20px;
 }
 
 .group:hover{
@@ -43,7 +45,7 @@ body{
 }
 
 .group h3{
-    margin-top: 10px;
+
     font-size: 1.8em;
     color:white;
 }
@@ -96,7 +98,17 @@ body{
     align-items: center;
     justify-content: center;
 }
-
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    color: #ff0000;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
 .tel{
     display: none;
 }

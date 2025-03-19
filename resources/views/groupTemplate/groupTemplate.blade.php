@@ -88,7 +88,17 @@
                             <h3>{{ $AllListe->description }}</h3>
                             <h3>{{ $AllListe->Lien }}</h3>
                         </div>
+
+                        @if($AllListe->user_id === auth()->id()) <!-- Vérifie si l'utilisateur est le créateur -->
+                        <form action="{{ route('liste.delete', $AllListe->id) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger red">Supprimer</button>
+                        </form>
+                        @endif
                     </a>
+
+
                 @endforeach
             </div>
         </div>

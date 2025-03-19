@@ -33,9 +33,10 @@ Route::post('/update-profile-image', [myAccount::class, 'updateProfileImage'])->
 Route::get('/contact-support', [ContactController::class, 'index'])->name('contact.support');
 // Route pour envoyer le form contact dans la bdd
 Route::post('/contact-support', [ContactController::class, 'contactFromUser'])->name('contact.form');
-
-
-
+// Route pour delete une Liste
+Route::delete('/liste/{id}', [GroupController::class, 'SuppListe'])->middleware('auth')->name('liste.delete');
+// Route pour supprimer son groupe
+Route::delete('/group/{id}', [GroupController::class, 'deleteGroup'])->middleware('auth')->name('group.delete');
 // Groups
 
 // Route pour afficher la page mesGroupes

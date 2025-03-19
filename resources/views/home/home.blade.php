@@ -88,6 +88,9 @@
                     <p>Fini les doublons et les hésitations : avec Flowr, chaque cadeau trouve sa place et apporte de la
                         joie à vos moments spéciaux !</p>
                 </div>
+                <div class="button-contact">
+                    <a href="{{ route('contact.support') }}">Nous contacter</a>
+                </div>
             </div>
 
         </div>

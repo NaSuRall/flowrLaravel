@@ -20,6 +20,15 @@
                         <div class="img-block">
                          <h2>Code d'invitation :  {{ $group->code}}</h2>
                         </div>
+
+                        @if ($group->user_id === auth()->id())
+                            <form action="{{ route('group.delete', $group->id) }}" method="POST" onsubmit=" return confirm('Voulez-vous vraiment supprimer ce groupe ?');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="button">Supprimer le groupe</button>
+                            </form>
+                        @endif
+
                     </a>
                 @endforeach
                 <div class="but">

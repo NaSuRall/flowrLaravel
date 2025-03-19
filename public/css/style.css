@@ -344,6 +344,25 @@ h1 span, h3 span{
     color: #ffffff;
 }
 
+.button-contact{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 30%;
+    padding: 10px 20px;
+    background-color: rgba(27, 111, 211, 0.91);
+    border-radius: 10px;
+    transition: 0.3s all ease-in-out;
+}
+.button-contact a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+.button-contact:hover{
+    background-color: rgba(118, 178, 255, 0.91);
+}
 .seed{
     opacity: 0.5;
 }

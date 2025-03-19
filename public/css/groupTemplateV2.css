@@ -6,6 +6,7 @@
     padding: 0;
     font-family: "Poppins", serif;
 }
+
 body{
     background: linear-gradient(90deg, #ffffff, #beddff, #e3ecff);
     background-size: 300% 300%;
@@ -431,7 +432,9 @@ button[type="submit"]:active {
 .tel{
     display: none;
 }
-
+.red{
+    background-color: red;
+}
 @media screen and (max-width: 1300px) {
 
     .container{

@@ -82,7 +82,29 @@ class GroupController extends Controller
         return redirect()->route('group.show', $group->code );
     }
 
+    public function SuppListe($id)
+    {
+        $liste = Liste::findOrFail($id);
+
+        if ($liste->user_id !== auth()->id()) {
+            return redirect()->back()->with('error', 'Vous ne pouvez supprimer que vos propres listes.');
+        }
+        $liste->delete();
+        return redirect()->back()->with('success', 'Liste supprimée avec succès.');
+    }
+
+    public function deleteGroup($id)
+    {
+        $group = Group::findOrFail($id);
 
 
+        if ($group->user_id !== auth()->id()) {
+            return redirect()->back()->with('error', 'Seul le créateur du groupe peut le supprimer.');
+        }
+
+        $group->delete();
+
+        return redirect()->route('groups')->with('success', 'Groupe supprimé avec succès.');
+    }
 
 }
