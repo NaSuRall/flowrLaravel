@@ -33,11 +33,13 @@ class GroupController extends Controller
         ]);
     }
 
+
+    // Creer le groupe et l'envoie dans la bdd
     public function save(Request $request)
     {
 
         if (!auth()->check()) {
-            return redirect()->route('login')->with('error', 'Vous devez être connecté pour créer un groupe.');
+            return redirect()->route('login');
         }
 
         $userId = auth()->id();
@@ -45,17 +47,18 @@ class GroupController extends Controller
         $group = Group::create([
             'name' => $request->input('name'),
             'user_id' => $userId,
+            // Genere un code unique pour le groupe
             'code' => Group::generateUniqueCode(),
             'group_id' => $request->input('group_id'),
         ]);
 
+        //envoie un mail lorsque le groupe est creer
         Mail::to(auth()->user()->email)->send(new groupCreateMail($group));
 
-
+        // ajoute automatiquement l'utilisateur qui a créer le groupe
         $group->users()->attach($userId);
 
-        return redirect()->route('group.show', ['code' => $group->code])
-            ->with('success', 'Groupe créé avec succès !');
+        return redirect()->route('group.show', ['code' => $group->code]);
     }
 
 
