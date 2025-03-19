@@ -15,7 +15,7 @@ class listeTemplateController extends Controller
         $templates = listeTemplate::where('liste_id', $id)->get();
 
         if ($liste->user_id != auth()->id()) {
-            return view('listeTemplate.listeTemplate', compact('liste','group', 'templates'))->with('error', 'Vous ne pouvez pas ajouter de composants à cette liste.');
+            return view('listeTemplate.listeTemplate', compact('liste','group', 'templates'));
         }
         return view('listeTemplate.listeTemplate', compact('liste', 'group', 'templates'));
     }
@@ -23,10 +23,9 @@ class listeTemplateController extends Controller
     public function create(Request $request, $id, $code)
     {
 
-        $group = Group::where('code', $code)->firstOrFail();
         $liste = Liste::findOrFail($id);
 
-        // Créer le template
+        // Créer la liste
         listeTemplate::create([
             'liste_id' => $liste->id,
             'user_id' => auth()->id(),
@@ -36,9 +35,7 @@ class listeTemplateController extends Controller
             'code' => $code,
         ]);
 
-        return redirect()->route('listeTemplate', ['id' => $liste->id, 'code' => $code])
-            ->with('success', 'Template créé avec succès !');
+        return redirect()->route('listeTemplate', ['id' => $liste->id, 'code' => $code]);
     }
-
 
 }
