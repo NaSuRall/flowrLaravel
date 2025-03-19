@@ -30,7 +30,7 @@
     height: 50px;
     background-size: cover;
 }
-.column-picture-name {
+.columnPictureName {
     float: left;
     padding: 10px;
     height: 100vh;
@@ -79,7 +79,7 @@
     height: 100%;
     background-size: cover;
 }
-.right-name {
+.rightName {
     width: 75%;
     display: flex;
     align-items: center;

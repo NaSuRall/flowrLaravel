@@ -34,7 +34,7 @@
         </form>
 
 
-        <div class="right-name column-picture-name">
+        <div class="rightName columnPictureName">
             <div class="renseignementsPersonnels">
                 <h2><i class="fa-solid fa-house"></i> Information du Compte : </h2>
 
