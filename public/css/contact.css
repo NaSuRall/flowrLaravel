@@ -5,18 +5,19 @@ body {
     padding: 0;
 }
 
-.titreContact{
+.titreContact {
     text-align: center;
 }
 
 .formContact {
-    width: 100%;
-    max-width: 600px;
+    width: 800px;
+    height: 450px;
     margin: 50px auto;
     padding: 20px;
     background: white;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 #contactForm {
@@ -24,19 +25,17 @@ body {
     flex-direction: column;
 }
 
-#contactForm input[type="text"],
-#contactForm textarea,
-#contactForm input[type="file"] {
-    width: 100%;
+.inputUser {
+    width: calc(100% - 20px);
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
-#contactForm input::placeholder,
-#contactForm textarea::placeholder {
+.inputUser::placeholder {
     color: #999;
 }
 
@@ -52,20 +51,21 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 18px;
-    cursor: pointer;
     transition: background 0.3s ease;
+    margin: 10px;
 }
 
 #contactForm button:hover {
     background: #0056b3;
 }
 
-#contactForm input[type="file"] {
+#pieceJointe {
     border: none;
     background: #f8f8f8;
     padding: 8px;
-    cursor: pointer;
+    margin: 10px;
 }
+
 
 .tel{
     display: none;
@@ -83,7 +83,5 @@ body {
     }
     .img-force img{
         width: 100%;
-
     }
-
 }
