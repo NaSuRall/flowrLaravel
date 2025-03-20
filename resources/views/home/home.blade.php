@@ -178,12 +178,6 @@
 
 
 
-    <div class="tel">
-        <div class="img-force">
-            <img src="{{ asset('img/bg-tel.png') }}" alt="Image tel logo">
-        </div>
-    </div>
-
 
 
 @endsection

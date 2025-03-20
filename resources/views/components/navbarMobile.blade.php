@@ -126,7 +126,7 @@
             <li><a href="{{ url('contact-support') }}">Contact</a></li>
 
             @if(auth()->id())
-                <a href="{{ route('logout') }}">Deconnexion</a>
+               <li><a href="{{ route('logout') }}">Deconnexion</a></li>
             @endif
         </ul>
     </nav>
