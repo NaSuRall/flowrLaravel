@@ -7,7 +7,7 @@
 @section('content')
 
     @include('components.navbar')
-
+    @include('components.navbarMobile')
     <div class="titreContact">
         <h1>Besoins de nous contacter ?</h1>
     </div>

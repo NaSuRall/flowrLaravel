@@ -14,13 +14,13 @@
 
         <div class="cont">
             <!-- Liste des Templates -->
-            <div class="template-list" style="width: 70%; padding: 20px;">
+            <div class="template-list" >
                 <h3>Cadeaux existants</h3>
                 <ul>
                     @foreach ($templates as $template)
                         <div class="cadeaux">
                         <h2><span>Nom : </span>{{ $template->name }} </h2>
-                        <h2><span>Description : </span> {{ $template->description }}</h2>
+                        <h2><span>Prix : </span> {{ $template->description }}</h2>
                         <h2><span>Lien : </span> {{ $template->lien }}</h2>
                         </div>
 
@@ -29,9 +29,8 @@
             </div>
 
             <!-- Formulaire de création -->
-            <div class="template-form" style="width: 30%; padding: 20px;">
+            <div class="template-form" >
                 @if(auth()->id() == $liste->user_id)
-                    <!-- Afficher le formulaire pour ajouter un composant -->
                     <form method="POST" action="{{ route('create.tem.liste', ['id' => $liste->id, 'code' => $group->code]) }}">
                         @csrf
                         <input type="hidden" name="liste_id" value="{{ $liste->id }}">
@@ -40,8 +39,8 @@
                         <label>Nom de l'idée de cadeaux</label>
                         <input type="text" name="name" required>
 
-                        <label>Description / prix</label>
-                        <input type="text" name="description" required>
+                        <label>Prix</label>
+                        <input type="text" name="description" maxlength="10" required>
 
                         <label>Lien (si possible )</label>
                         <input type="text" name="lien">
@@ -62,9 +61,4 @@
     </div>
 
 
-    <div class="tel">
-        <div class="img-force">
-            <img src="{{ asset('img/bg-tel.png') }}" alt="">
-        </div>
-    </div>
 @endsection

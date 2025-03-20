@@ -8,6 +8,7 @@
 
     <div class="container">
         @include('components.navbar')
+        @include('components.navbarMobile')
         <div class="contain">
             <div class="titre">
                 <h1>Création de votre Groupe !</h1>

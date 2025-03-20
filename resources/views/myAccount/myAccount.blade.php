@@ -10,8 +10,8 @@
 
 <div class="container">
 
-    @include('components.navbar');
-
+    @include('components.navbar')
+    @include('components.navbarMobile')
     <div class="logo"><img src="{{ asset('img/FlowrLogo.png') }}" alt=""></div>
     <div class="containerEnfant">
 
@@ -112,10 +112,5 @@
 </div>
 
 
-<div class="tel">
-    <div class="img-force">
-        <img src="{{ asset('img/bg-tel.png') }}" alt="Site indisponible">
-    </div>
-</div>
 <script src="{{ asset('js/dialog.js') }}"></script>
 @endsection

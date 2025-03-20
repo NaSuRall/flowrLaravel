@@ -76,20 +76,37 @@
 .tel{
     display: none;
 }
-@media screen and (max-width: 1300px) {
+@media (min-width:1100px)  and (max-width: 1400px) {
 
-    .container{
+
+}
+@media (min-width:780px)  and (max-width: 1100px) {
+    .titre h1{
+        font-size: 3em;
+
+    }
+    .navbar{
+       visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .titre h1{
+        font-size: 1.2em;
+
+    }
+    .form-name-group{
+        flex-direction: column;
+    }
+    .titre .input-Groupe-Name {
+        width: 100%;
+    }
+    .form-name-group button{
+        width: 100%;
+        height: 30px;
+        margin-top: 20px;
+    }
+    #mySidenav{
         display: none;
     }
-    .tel{
-        display: flex;
-        width: 100%;
-        height: 100vh;
-        background-color: white;
-    }
-    .img-force img{
-        width: 100%;
-
-    }
-
 }

@@ -7,11 +7,14 @@ body {
 
 .titreContact {
     text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
 }
 
 .formContact {
     width: 800px;
-    height: 450px;
+    max-width: 90%; /* Pour s'adapter aux petits écrans */
+    height: auto;
     margin: 50px auto;
     padding: 20px;
     background: white;
@@ -53,6 +56,7 @@ body {
     font-size: 18px;
     transition: background 0.3s ease;
     margin: 10px;
+    cursor: pointer;
 }
 
 #contactForm button:hover {
@@ -66,22 +70,66 @@ body {
     margin: 10px;
 }
 
+/* --- Responsive --- */
 
-.tel{
-    display: none;
+/* PC Portable (1100px à 1400px) */
+@media (min-width: 1100px) and (max-width: 1400px) {
+    .formContact {
+        width: 700px;
+    }
 }
-@media screen and (max-width: 1300px) {
 
-    .container{
+/* Tablette (780px à 1100px) */
+@media (min-width: 780px) and (max-width: 1099px) {
+    .sidenav{
         display: none;
     }
-    .tel{
-        display: flex;
-        width: 100%;
-        height: 100vh;
-        background-color: white;
+    .formContact {
+        width: 90%;
+        padding: 15px;
     }
-    .img-force img{
-        width: 100%;
+
+    .titreContact {
+        font-size: 22px;
     }
+
+    .inputUser {
+        font-size: 14px;
+    }
+
+    #contactForm button {
+        font-size: 16px;
+    }
+}
+
+/* Téléphone (moins de 780px) */
+@media screen and (max-width: 780px) {
+    .sidenav{
+        display: none;
+    }
+    .titreContact {
+        font-size: 20px;
+        margin-top: 80px;
+    }
+
+    .formContact {
+        width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .inputUser {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #contactForm textarea {
+        height: 120px;
+    }
+
+    #contactForm button {
+        font-size: 16px;
+        padding: 8px;
+    }
+
 }

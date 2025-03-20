@@ -7,3 +7,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 1000);
     }, 2000);
 });
+
+
+document.getElementById('burger-btn').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('open');
+});
+
+document.getElementById('close-btn').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.remove('open');
+});

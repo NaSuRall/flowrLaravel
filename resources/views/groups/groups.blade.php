@@ -9,6 +9,7 @@
 
     <div class="container">
         @include('components.navbar')
+        @include('components.navbarMobile')
         <div class="titre">
             <h1>MES GROUPES</h1>
 

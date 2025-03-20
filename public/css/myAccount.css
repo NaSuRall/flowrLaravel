@@ -1,266 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import "annimation.css";
-*{
+/* Style général pour tous les écrans */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Poppins", serif;
 }
-.container{
+
+.containerEnfant {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    width: 100%;
-    height: 100vh;
-}
-.containerEnfant{
-    display: flex;
+    flex-direction: row; /* Mise en deux colonnes */
     width: 100%;
     height: 100%;
 }
-.logo{
+
+.containerEnfant {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap; /* Permet de passer à la ligne en cas de besoin */
+}
+
+/* Logo */
+.logo {
     display: flex;
     position: fixed;
     top: 20px;
     right: 20px;
 }
-.logo img{
+
+.logo img {
     width: 50px;
     height: 50px;
     background-size: cover;
 }
-.columnPictureName {
-    float: left;
-    padding: 10px;
-    height: 100vh;
-}
-.img{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 40%;
-    padding-top: 50px;
-}
-.form-upload{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-.form-upload button{
-    padding: 10px 20px 10px 20px;
-    color: #ffffff;
-    text-decoration: none;
-    background-color: rgba(27, 111, 211, 0.91);
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    font-size: 1.2em;
-}
-.form-upload button:hover{
-    background-color: rgba(78, 154, 246, 0.91);
-}
-.form-upload input{
-    width: 80%;
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 10px 20px 10px 20px;
-    font-size: 1.2em;
-    font-family: "Poppins", serif;
 
+/* Section des images et informations de profil */
+.img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding-top: 50px;
+    margin-bottom: 30px;
 }
-.imageProfile{
+
+.img img {
     width: 200px;
     height: 200px;
-    background-size: cover;
     border-radius: 50%;
-}
-.imageProfile img{
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-}
-.rightName {
-    width: 75%;
-    display: flex;
-    align-items: center;
-    overflow:scroll;
-    flex-direction: column;
-}
-
-.containerEnfant:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.renseignementsPersonnels{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-    font-family: "Poppins", serif;
-}
-.information-compte{
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 90%;
-    height: 100%;
-    background-color: #ffffff;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 10px;
-    font-family: "Poppins", serif;
-    padding: 20px;
-}
-.blocRenseignement{
-    border-bottom: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
-    font-family: "Poppins", serif;
-}
-.columRens{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    font-family: "Poppins", serif;
-}
-.columRens h1{
-    font-size: 1.5em;
-    font-family: "Poppins", serif;
-}
-.btnUser{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 40px;
-}
-.btnUser button{
-    padding: 10px 20px 10px 20px;
-    color: #ffffff;
-    text-decoration: none;
-    background-color: rgba(27, 111, 211, 0.91);
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    font-size: 1.2em;
-    font-family: "Poppins", serif;
-}
-.btnUser h2{
-    font-size: 1.5em;
-    font-family: "Poppins", serif;
-}
-
-#modifNom{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    padding: 20px;
-    background-color: #1d72cd;
-    font-size: 25px;
-}
-
-#modifNom:hover{
-    background-color: rgba(78, 154, 246, 0.91);
-}
-
-dialog {
-    width: 40%;
-    max-width: 500px;
-    background: white;
-    border-radius: 10px;
-    border: none;
-    padding: 20px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-/* Quand la boîte est affichée */
-dialog[open] {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-/* Bouton de fermeture */
-.btnc {
-    display: flex;
-    justify-content: flex-end;
-}
-
-#btnCloseEditName {
-    background: red;
-    color: white;
-    border: none;
-    padding: 5px 14px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 50%;
-}
-
-#btnCloseEditName:hover {
-    background: darkred;
-}
-
-/* Contenu du formulaire */
-.updateName {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.updateName label {
-    font-weight: bold;
-}
-
-.updateName input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-.updateName button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
-}
-
-.updateName button:hover {
-    background: #0056b3;
+    object-fit: cover;
 }
 
 .formProfileAvatar {
@@ -283,47 +72,183 @@ dialog[open] {
     color: #333;
 }
 
-.formProfileAvatar select {
+.formProfileAvatar select, .formProfileAvatar button {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
     background: white;
 }
 
-.formProfileAvatar button, #modifNom{
+/* Informations de l'utilisateur */
+.rightName {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+.renseignementsPersonnels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.information-compte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.blocRenseignement {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.columRens h1 {
+    font-size: 1.5em;
+}
+
+.btnUser {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.btnUser button {
     padding: 10px 20px;
+    color: #ffffff;
+    background-color: rgba(27, 111, 211, 0.91);
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+/* Bouton Modifier */
+#modifNom {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    background-color: #1d72cd;
     color: white;
-    background: #007bff;
-    border: none;
+    padding: 20px 20px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1.5em;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
-    margin-top: 20px;
+    width: 100%;
+    border: none;
 }
 
-.formProfileAvatar button:hover, #modifNom:hover {
-    background: #0056b3;
+#modifNom:hover {
+    background-color: rgba(78, 154, 246, 0.91);
 }
 
-.tel{
-    display: none;
+/* Dialogue */
+dialog {
+    width: 40%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-@media screen and (max-width: 1300px) {
 
-    .container{
+dialog[open] {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btnc {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#btnCloseEditName {
+    background: red;
+    color: white;
+    padding: 5px 14px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+#btnCloseEditName:hover {
+    background: darkred;
+}
+
+/* Réactivité pour les petits écrans */
+/* Pour la disposition responsive (en colonne) */
+
+
+/* Pour les très petits écrans (moins de 600px) */
+@media (max-width: 1000px) {
+    .img {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .sidenav{
         display: none;
     }
-    .tel{
-        display: flex;
-        width: 100%;
-        height: 100vh;
-        background-color: white;
-    }
-    .img-force img{
-        width: 100%;
 
+    .formProfileAvatar {
+        width: 90%;
+    }
+
+    .renseignementsPersonnels {
+        padding: 10px;
+    }
+
+    .information-compte {
+        padding: 10px;
+        overflow: scroll;
+    }
+
+    .blocRenseignement {
+        flex-direction: column;
+        width: 100%;
+        display: block;
+    }
+
+    .btnUser {
+        gap: 20px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .btnUser h2{
+        width: 100%;
+        font-size: 1em;
+    }
+    #modifNom {
+        font-size: 1.2em;
+        padding: 8px 15px;
+        width: 100%;
+        border: none;
+    }
+    .rightName{
+        width: 100%;
     }
 }

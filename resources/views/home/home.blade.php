@@ -13,7 +13,14 @@
     <img src="{{ asset('img/FlowrLogo.png') }}" alt="Logo" id="loader-logo">
 </div>
 
+
+
     <div class="container">
+
+
+
+        @include('components.navbar')
+        @include('components.navbarMobile')
 
         <div class="profil">
             @if(auth()->id())
@@ -35,7 +42,7 @@
         </div>
 
 
-        @include('components.navbar')
+
 
 
         <div id="titre" class="block">
@@ -44,8 +51,12 @@
             @else
                 <h1>Bienvenue sur <span>FLOWR</span></h1>
             @endif
+
             <h3>Le site incontournable pour faire ses listes de cadeaux</h3>
+                <h2>Flowr</h2>
         </div>
+
+
         <div id="blockButton">
             <h3>Cliquez sur le bouton d'action que vous souhaitez:</h3>
             <div id="mainButton" class="block">
@@ -174,5 +185,5 @@
     </div>
 
 
-    <script src="{{ asset('js/loader.js') }}"></script>
+
 @endsection

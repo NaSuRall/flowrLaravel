@@ -1,14 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "annimation.css";
-*{
+* {
+
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-body{
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     background-color: #f4f5ff;
+}
+.navbar{
+    display: none;
 }
 .profil{
     display: flex;
@@ -413,120 +425,422 @@ h1 span, h3 span{
 
 
 /* ----- Responsive Design ----- */
-@media screen and (max-width: 1300px) {
 
-    .container{
+@media screen and (max-width: 1800px) {
+    .gif{
+        z-index: -2;
+    }
+    #ordi{
         display: none;
     }
-    .tel{
-        display: flex;
-        width: 100%;
-        height: 100vh;
-        background-color: white;
+    .no-co{
+        margin-top: 20px;
     }
-    .img-force img{
-        width: 100%;
-
+    .no-co a{
+        font-size: 1em;
+    }
+    #titre{
+        height: 20vh;
+    }
+    #titre h1{
+        font-size: 3.5em;
+    }
+#titre h2{
+    display: none;
+}
+    #presentation{
+        width: 75%;
+    }
+    #blockAbonnement{
+        margin-top: 100px;
+    }
+    #listeAbonnement{
+        width: 90%;
+        margin-bottom: 200px ;
+    }
+    #titre h2{
+        visibility: visible;
+        color: #0d6efd;
+        font-size: 2.5em;
+        margin-top: 10px;
+    }
+    #titre h3{
+        display: none;
+    }
+    .profil{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .round{
+        width: 70px;
     }
 
 }
 
+@media (min-width:700px)  and (max-width: 1100px) {
+
+    .gif{
+        z-index: -2;
+    }
+    .sidenav{
+        display: none;
+    }
+    #ordi{
+        display: none;
+    }
+    .no-co{
+        margin-top: 20px;
+    }
+    .no-co a{
+        font-size: 1em;
+    }
+    #titre{
+        height: 20vh;
+    }
+    #titre h1{
+        display: none;
+    }
 
 
+    #titre h2{
+        display: flex;
+        visibility: visible;
+        color: #0d6efd;
+        font-size: 2.5em;
+        margin-top: 10px;
+    }
+    #titre h3{
+        display: none;
+    }
+    .profil{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .round{
+        width: 70px;
+    }
+    #blockButton{
+        height: 100%;
+    }
+    #blockButton h3{
+        font-size: 1.2em;
+    }
+    #mainButton {
+        display: flex;
+        flex-direction: column;
+    }
+    .button{
+        width: 60%;
+        height: 200px;
 
-/*#ordi{*/
-/*    display: none;*/
-/*}*/
-/* .no-co{*/
-/*     margin-top: 20px;*/
-/* }*/
-/* .no-co a{*/
-/*     font-size: 1em;*/
-/* }*/
-/*#titre{*/
-/*    height: 20vh;*/
-/*}*/
-/*#titre h1{*/
-/*   display: none;*/
-/*}*/
-/*#titre h2{*/
-/*    visibility: visible;*/
-/*    color: #0d6efd;*/
-/*    font-size: 4em;*/
-/*}*/
-/*#titre h3{*/
-/*   display: none;*/
-/*}*/
-/*.profil{*/
-/*    position: absolute;*/
-/*    top: 10px;*/
-/*    right: 10px;*/
-/*}*/
-/*.round{*/
-/*    width: 70px;*/
-/*}*/
-/*#blockButton{*/
+    }
+    .partie-pres{
+        height: 100%;
+        margin: 120px 0px
+    }
+
+    #presentation{
+        margin: 0px;
+        box-shadow: none;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+    #presentation h2{
+        font-size: 35px;
+    }
+    .button-contact{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    #textePrez{
+        height: 100%;
+    }
+    #textePrez h3{
+        font-size: 1em;
+    }
+    #textePrez p{
+        font-size: 15px;
+    }
+
+    #blockAbonnement{
+        margin-top: 50px;
+        height: 100%;
+        z-index: -1;
+
+    }
+    #listeAbonnement{
+        width: 100%;
+        flex-direction: column;
+    }
+    #abo{
+        z-index: -1;
+    }
+    #abo h3{
+        font-size: 1.5em;
+    }
+    .texte ul li{
+        font-size: 0.9em;
+    }
+    .abonnementPanier button{
+        font-size: 1em;
+    }
+    #blockAbonnement h2{
+        font-size: 1.7em;
+        z-index: -1;
+    }
+    .card{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .gif{
+        z-index: -2;
+    }
+    .sidenav{
+        display: none;
+    }
+    #ordi{
+        display: none;
+    }
+    .no-co{
+        margin-top: 20px;
+    }
+    .no-co a{
+        font-size: 1em;
+    }
+    #titre{
+        height: 20vh;
+    }
+    #titre h1{
+        display: none;
+    }
+
+    #titre h2{
+        visibility: visible;
+        color: #0d6efd;
+        font-size: 2.5em;
+        margin-top: 10px;
+        display: flex;
+    }
+    #titre h3{
+        display: none;
+    }
+    .profil{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .round{
+        width: 70px;
+    }
+    #blockButton{
+        height: 100%;
+    }
+    #blockButton h3{
+        font-size: 1.2em;
+    }
+    #mainButton {
+        display: flex;
+        flex-direction: column;
+    }
+    .button{
+        width: 100%;
+        height: 200px;
+
+    }
+    .partie-pres{
+        height: 100%;
+        margin: 120px 0px
+    }
+
+    #presentation{
+        margin: 0px;
+        box-shadow: none;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+    #presentation h2{
+        font-size: 35px;
+    }
+    .button-contact{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    #textePrez{
+        height: 100%;
+    }
+    #textePrez h3{
+        font-size: 1em;
+    }
+    #textePrez p{
+        font-size: 15px;
+    }
+
+    #blockAbonnement{
+        margin-top: 50px;
+        height: 100%;
+        z-index: -1;
+        display: none;
+    }
+    #listeAbonnement{
+        width: 100%;
+        flex-direction: column;
+    }
+    #abo{
+        z-index: -1;
+    }
+    #abo h3{
+        font-size: 1.5em;
+    }
+    .texte ul li{
+        font-size: 0.9em;
+    }
+    .abonnementPanier button{
+        font-size: 1em;
+    }
+    #blockAbonnement h2{
+        font-size: 1.7em;
+        z-index: -1;
+    }
+    .card{
+        display: none;
+    }
+}
+
+/*@media screen and (max-width: 480px) {*/
+/*    .gif{*/
+/*        z-index: -2;*/
+/*    }*/
+/*    .sidenav{*/
+/*        display: none;*/
+/*    }*/
+/*    #ordi{*/
+/*        display: none;*/
+/*    }*/
+/*     .no-co{*/
+/*         margin-top: 20px;*/
+/*     }*/
+/*     .no-co a{*/
+/*         font-size: 1em;*/
+/*     }*/
+/*    #titre{*/
+/*        height: 20vh;*/
+/*    }*/
+/*    #titre h1{*/
+/*       display: none;*/
+/*    }*/
+
+/*    #titre h2{*/
+/*        visibility: visible;*/
+/*        color: #0d6efd;*/
+/*        font-size: 2.5em;*/
+/*        margin-top: 10px;*/
+/*    }*/
+/*    #titre h3{*/
+/*       display: none;*/
+/*    }*/
+/*    .profil{*/
+/*        position: absolute;*/
+/*        top: 10px;*/
+/*        right: 10px;*/
+/*    }*/
+/*    .round{*/
+/*        width: 70px;*/
+/*    }*/
+/*    #blockButton{*/
+/*        height: 100%;*/
+/*    }*/
+/*        #blockButton h3{*/
+/*        font-size: 1.2em;*/
+/*    }*/
+/*    #mainButton {*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*    }*/
+/*    .button{*/
+/*        width: 100%;*/
+/*        height: 200px;*/
+
+/*    }*/
+/*    .partie-pres{*/
 /*    height: 100%;*/
-/*}*/
-/*    #blockButton h3{*/
-/*    font-size: 1.2em;*/
-/*}*/
-/*#mainButton {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*}*/
-/*.button{*/
-/*    width: 100%;*/
-/*    height: 200px;*/
+/*    }*/
 
-/*}*/
-/*.partie-pres{*/
-/*height: 100%;*/
-/*}*/
-
-/*#presentation{*/
-/*    margin: 0px;*/
-/*    box-shadow: none;*/
-/*    display: flex;*/
-/*    width: 100%;*/
-/*    flex-direction: column;*/
-/*}*/
-/*#presentation h2{*/
-/*    font-size: 35px;*/
-/*}*/
-/*#textePrez{*/
-/*    height: 100%;*/
-/*}*/
-/*#textePrez h3{*/
-/*    font-size: 1em;*/
-/*}*/
-/*#textePrez p{*/
-/*    font-size: 15px;*/
-/*}*/
-
-/*#blockAbonnement{*/
-/*    margin-top: 50px;*/
-/*      height: 100%;*/
-/*}*/
-/*#listeAbonnement{*/
-/*    width: 100%;*/
-/*    flex-direction: column;*/
-/*}*/
-/*#abo{*/
-/*    width: 100%;*/
-/*}*/
-/*#abo h3{*/
-/*    font-size: 1.5em;*/
-/*}*/
-/*.texte ul li{*/
-/*    font-size: 0.9em;*/
-/*}*/
-/*    .abonnementPanier button{*/
+/*    #presentation{*/
+/*        margin: 0px;*/
+/*        box-shadow: none;*/
+/*        display: flex;*/
+/*        width: 100%;*/
+/*        flex-direction: column;*/
+/*        align-items: center;*/
+/*        justify-content: center;*/
+/*        z-index: -1;*/
+/*    }*/
+/*    #presentation h2{*/
+/*        font-size: 35px;*/
+/*    }*/
+/*   .button-contact{*/
+/*       display: flex;*/
+/*       align-items: center;*/
+/*       justify-content: center;*/
+/*       width: 100%;*/
+/*   }*/
+/*    #textePrez{*/
+/*        height: 100%;*/
+/*    }*/
+/*    #textePrez h3{*/
 /*        font-size: 1em;*/
 /*    }*/
-/*    #blockAbonnement h2{*/
-/*        font-size: 1.7em;*/
+/*    #textePrez p{*/
+/*        font-size: 15px;*/
 /*    }*/
-/*.card{*/
-/*    display: none;*/
+
+/*    #blockAbonnement{*/
+/*        margin-top: 50px;*/
+/*          height: 100%;*/
+/*        z-index: -1;*/
+/*    }*/
+/*    #listeAbonnement{*/
+/*        width: 100%;*/
+/*        flex-direction: column;*/
+/*    }*/
+/*    #abo{*/
+/*        display: none;*/
+/*    }*/
+/*    #abo h3{*/
+/*        font-size: 1.5em;*/
+/*    }*/
+/*    .texte ul li{*/
+/*        font-size: 0.9em;*/
+/*    }*/
+/*        .abonnementPanier button{*/
+/*            font-size: 1em;*/
+/*        }*/
+/*        #blockAbonnement h2{*/
+/*            font-size: 1.7em;*/
+/*            z-index: -1;*/
+/*        }*/
+/*    .card{*/
+/*        display: none;*/
+/*    }*/
 /*}*/
+
+
+
+
+

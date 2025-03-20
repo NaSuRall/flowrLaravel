@@ -64,10 +64,5 @@
 
 </div>
 
-<div class="tel">
-    <div class="img-force">
-        <img src="{{ asset('img/bg-tel.png') }}" alt="">
-    </div>
-</div>
 
 @endsection

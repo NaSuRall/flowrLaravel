@@ -14,9 +14,6 @@ class listeTemplateController extends Controller
         $liste = Liste::findOrFail($id);
         $templates = listeTemplate::where('liste_id', $id)->get();
 
-        if ($liste->user_id != auth()->id()) {
-            return view('listeTemplate.listeTemplate', compact('liste','group', 'templates'));
-        }
         return view('listeTemplate.listeTemplate', compact('liste', 'group', 'templates'));
     }
 
